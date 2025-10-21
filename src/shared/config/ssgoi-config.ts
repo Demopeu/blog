@@ -1,7 +1,9 @@
 'use client';
-
-import { fade } from '@ssgoi/react/view-transitions';
+import { scroll } from '@ssgoi/react/view-transitions';
 
 export const ssgoiConfig = {
-  defaultTransition: fade(),
+  transitions: [
+    { from: '/', to: '/about', transition: scroll({ direction: 'up' }) },
+    { from: '/about', to: '/', transition: scroll({ direction: 'down' }) },
+  ],
 };

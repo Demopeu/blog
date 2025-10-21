@@ -1,6 +1,7 @@
-export {Badge, badgeVariants} from "./badge";
-export {Button, buttonVariants} from "./button";
-export {DropdownMenu,
+export { Badge, badgeVariants } from './badge';
+export { Button, buttonVariants } from './button';
+export {
+  DropdownMenu,
   DropdownMenuPortal,
   DropdownMenuTrigger,
   DropdownMenuContent,
@@ -14,12 +15,16 @@ export {DropdownMenu,
   DropdownMenuShortcut,
   DropdownMenuSub,
   DropdownMenuSubTrigger,
-  DropdownMenuSubContent} from "./dropdown-menu";
-export {Input} from "./input";
-export {Card,
+  DropdownMenuSubContent,
+} from './dropdown-menu';
+export { Input } from './input';
+export {
+  Card,
   CardHeader,
   CardFooter,
   CardTitle,
   CardAction,
   CardDescription,
-  CardContent} from "./card";
+  CardContent,
+} from './card';
+export { LogoText } from './logo-text';
