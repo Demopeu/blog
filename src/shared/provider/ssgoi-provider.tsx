@@ -1,7 +1,7 @@
 'use client';
 
 import { Ssgoi } from '@ssgoi/react';
-import { ssgoiConfig } from '@/config/ssgoi-config';
+import { ssgoiConfig } from '@/shared/config/ssgoi-config';
 
 export function SsgoiProvider({ children }: { children: React.ReactNode }) {
   return (

@@ -1,8 +1,6 @@
-import { ModeToggle } from '@/components/theme-toggle';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
+import { ModeToggle } from '@/features/theme-toggle';
+import { Card, CardHeader, CardTitle, CardContent, Button, Badge, Input } from '@/shared/ui';
+
 
 export default function Page() {
   return (

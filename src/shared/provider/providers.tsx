@@ -1,5 +1,5 @@
 'use client';
-import { composeProviders } from '@/lib/compose-providers';
+import { composeProviders } from '@/shared/lib/compose-providers';
 import { ThemeProvider } from './theme-provider';
 import { SsgoiProvider } from './ssgoi-provider';
 
