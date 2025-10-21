@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧩 FSD 구조
 
-## Getting Started
+- **shared(공유 컴포넌트)**  
+  - slice 없음  
+  - 공용 UI(shadcn), lib(유틸), config(env·상수), hooks, provider(전역 Context), 전역 api(fetch)
 
-First, run the development server:
+- **entities(데이터)**   
+  - 도메인 단위(User, Product 등)의 타입·api·ui 구성
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **features(행동)**   
+  - 로그인, 장바구니 담기 등 사용자 행위를 중심으로 구성
+  - slice 폴더 이름 또한 동사로 제작
+
+- **widgets(묶음)**  
+  - feature의 묶음 / 어떻게 묶을지는 재사용 여부에 따라 페이지 섹션 단위(layout 포함 묶음 전부 포함)
+
+## 🔁 규칙
+
+### ⚙️ 의존성 규칙
+```
+widgets → features → entities → shared
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 상위 → 하위로만 import 가능  
+- `shared`는 누구에게도 의존하지 않음
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 📦 폴더 구조 규칙
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- index.ts로 export 하도록 구성(무조건 캡슐화)
