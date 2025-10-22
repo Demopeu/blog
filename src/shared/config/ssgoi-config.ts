@@ -1,9 +1,25 @@
 'use client';
-import { scroll } from '@ssgoi/react/view-transitions';
+import { slide } from '@ssgoi/react/view-transitions';
 
 export const ssgoiConfig = {
   transitions: [
-    { from: '/', to: '/about', transition: scroll({ direction: 'up' }) },
-    { from: '/about', to: '/', transition: scroll({ direction: 'down' }) },
+    {
+      from: '/',
+      to: '/resume',
+      transition: slide({
+        direction: 'left',
+        spring: { stiffness: 150, damping: 20 },
+      }),
+      symmetric: true,
+    },
+    {
+      from: '/resume',
+      to: '/',
+      transition: slide({
+        direction: 'right',
+        spring: { stiffness: 150, damping: 20 },
+      }),
+      symmetric: true,
+    },
   ],
 };

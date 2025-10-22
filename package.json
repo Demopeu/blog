@@ -9,7 +9,8 @@
     "lint": "eslint",
     "prepare": "husky install",
     "typecheck": "tsc --noEmit",
-    "check-before-commit": "pnpm run typecheck && pnpm run lint"
+    "check-before-commit": "pnpm run typecheck && pnpm run lint",
+    "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -25,19 +26,23 @@
     "motion": "^12.23.24",
     "next": "15.5.6",
     "next-themes": "^0.4.6",
+    "ogl": "^1.0.11",
     "react": "19.2.0",
     "react-dom": "19.2.0",
+    "react-icons": "^5.5.0",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
     "@eslint/eslintrc": "^3",
+    "@next/bundle-analyzer": "^16.0.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
+    "cross-env": "^10.1.0",
     "eslint": "^9",
     "eslint-config-next": "15.5.6",
     "eslint-plugin-react-hooks": "^7.0.0",
