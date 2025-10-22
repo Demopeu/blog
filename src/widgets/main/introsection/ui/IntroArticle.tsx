@@ -23,7 +23,7 @@ export default function IntroArticle() {
             />
           }
           tag="span"
-          className="flex items-center justify-center rounded-lg bg-indigo-600 px-2 pt-0.5 pb-2"
+          className="bg-highlight-active flex items-center justify-center rounded-lg px-2 pt-0.5 pb-2"
         />
       </h1>
       <SplitText text="만드는 개발자🥗" tag="span" />

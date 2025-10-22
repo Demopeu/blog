@@ -6,8 +6,8 @@ export default function layout({ children }: { children: React.ReactNode }) {
     <div className="relative flow-root">
       <div className="fixed inset-0 z-0 h-full w-full">
         <Particles
-          particleColors={['#ffffff', '#4f39f6']}
-          particleCount={400}
+          particleColors={['#000000', '#ffffff', '#4f39f6', '#eb4034']}
+          particleCount={500}
           particleSpread={30}
           speed={0.2}
           particleBaseSize={500}
