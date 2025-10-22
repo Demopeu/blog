@@ -4,11 +4,10 @@ import { SsgoiTransition } from '@ssgoi/react';
 
 export default function page() {
   return (
-    <SsgoiTransition id="/about">
-      <div>
-        about
+    <SsgoiTransition id="/resume">
+      <main className="mt-40 px-16">
         <Link href="/">Home</Link>
-      </div>
+      </main>
     </SsgoiTransition>
   );
 }

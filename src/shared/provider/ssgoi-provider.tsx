@@ -6,7 +6,15 @@ import { ssgoiConfig } from '@/shared/config/ssgoi-config';
 export function SsgoiProvider({ children }: { children: React.ReactNode }) {
   return (
     <Ssgoi config={ssgoiConfig}>
-      <div style={{ position: 'relative', minHeight: '100vh' }}>{children}</div>
+      <div
+        style={{
+          position: 'relative',
+          overflowX: 'hidden',
+          overflowY: 'hidden',
+        }}
+      >
+        {children}
+      </div>
     </Ssgoi>
   );
 }

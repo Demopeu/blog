@@ -1,1 +1,1 @@
-export { IntroSection } from './ui';
+export { IntroSection } from './introsection';
