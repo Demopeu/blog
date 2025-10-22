@@ -73,12 +73,13 @@ export function UseStackLogoLoop() {
         logos={techLogos}
         speed={30}
         direction="left"
-        logoHeight={48}
+        logoHeight={44}
         gap={40}
         pauseOnHover
         scaleOnHover
         fadeOut
         ariaLabel="Technology partners"
+        className="scrollbar-none"
       />
     </div>
   );
