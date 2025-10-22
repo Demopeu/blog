@@ -11,7 +11,7 @@ export function ThemeToggle() {
   if (!mounted) {
     return (
       <button
-        className="bg-toggle-color relative flex h-12 w-20 cursor-pointer items-center justify-center overflow-hidden rounded-xl"
+        className="bg-toggle-color /* ← 추가 */ relative flex h-12 w-20 flex-none shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-xl"
         aria-label="테마 전환"
       />
     );
@@ -23,7 +23,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="bg-toggle-color relative flex h-12 w-20 cursor-pointer items-center justify-center overflow-hidden rounded-xl focus:outline-none"
+      className="bg-toggle-color /* ← 추가 */ relative flex h-12 w-20 flex-none shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-xl focus:outline-none"
       aria-label={isDark ? '라이트 모드로 전환' : '다크 모드로 전환'}
     >
       {/* ☀️ Sun + Clouds */}

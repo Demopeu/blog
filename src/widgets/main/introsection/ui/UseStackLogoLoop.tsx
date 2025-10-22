@@ -66,9 +66,9 @@ const techLogos = [
   },
 ];
 
-export function UseStackLogoLoop() {
+export default function UseStackLogoLoop() {
   return (
-    <div className="w-200">
+    <div className="w-160">
       <LogoLoop
         logos={techLogos}
         speed={30}
