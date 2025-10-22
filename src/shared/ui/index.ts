@@ -28,3 +28,4 @@ export {
   CardContent,
 } from './card';
 export { LogoText } from './logo-text';
+export { Switch } from './switch';

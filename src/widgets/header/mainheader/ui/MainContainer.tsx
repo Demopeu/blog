@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { LogoText } from '@/shared/ui';
 import NavBar from './NavBar';
+import { ThemeToggle } from './ThemeToggle';
 
 export default function MainContainer() {
   return (
@@ -10,7 +11,10 @@ export default function MainContainer() {
       <Link href="/" aria-label="Go to home">
         <LogoText />
       </Link>
-      <NavBar />
+      <div className="my-auto flex items-center justify-center gap-2">
+        <NavBar />
+        <ThemeToggle />
+      </div>
     </div>
   );
 }

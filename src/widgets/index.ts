@@ -1,2 +1,2 @@
-export { MainHeader } from './header';
-export { IntroSection } from './main';
+export { MainHeader } from './header/mainheader';
+export { IntroSection } from './main/introsection';
