@@ -1,1 +1,1 @@
-export { default as IntroSection } from './ui';
+export { IntroSection } from './ui/IntroSection';
