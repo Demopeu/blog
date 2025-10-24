@@ -6,7 +6,7 @@ import { heroText } from '@/widgets/hero/model/hero-text';
 
 export function Hero() {
   return (
-    <section className="mt-60 flex justify-between">
+    <section className="mt-40 flex items-center justify-between">
       <div className="space-y-10">
         <HeroText heroText={heroText} />
         <UseStackLogoLoop techLogos={techLogos} />

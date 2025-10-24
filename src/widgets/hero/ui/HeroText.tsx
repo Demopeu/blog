@@ -39,7 +39,7 @@ export function HeroText({
         />
       </h1>
       <SplitText text={heroText.fourthLine} tag="span" />
-      <div className="mt-8 ml-1 space-y-1 text-lg font-normal">
+      <div className="mt-8 ml-1 space-y-1 text-xs font-normal lg:text-sm xl:text-lg">
         <p>
           {heroText.fifthLine[0]}
           <b className="ml-1">{heroText.name}</b>
