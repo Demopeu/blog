@@ -1,4 +1,4 @@
-import { MainHeader } from '@/widgets/header/mainheader';
+import { MainHeader } from '@/widgets/main-header';
 import { Particles } from '@/shared/motion';
 
 export default function layout({ children }: { children: React.ReactNode }) {
