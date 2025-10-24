@@ -3,8 +3,8 @@ import { Particles } from '@/shared/motion';
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="relative flow-root">
-      <div className="fixed inset-0 z-0 h-full w-full">
+    <>
+      <div className="fixed inset-0 -z-10">
         <Particles
           particleColors={['#000000', '#ffffff', '#4f39f6', '#eb4034']}
           particleCount={500}
@@ -16,10 +16,8 @@ export default function layout({ children }: { children: React.ReactNode }) {
           disableRotation={false}
         />
       </div>
-      <div className="relative z-10">
-        <MainHeader />
-        {children}
-      </div>
-    </div>
+      <MainHeader />
+      {children}
+    </>
   );
 }

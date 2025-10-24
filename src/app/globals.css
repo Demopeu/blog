@@ -162,10 +162,6 @@
   }
 }
 
-html {
-  scrollbar-gutter: stable both-edges;
-}
-
 @keyframes bouncy {
   0% {
     transform: translateY(0) scale(1);

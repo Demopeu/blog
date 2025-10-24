@@ -5,7 +5,7 @@ import { ThemeToggle } from './ThemeToggle';
 
 export function MainHeader() {
   return (
-    <header className="from-background/50 px-bgx fixed top-0 z-50 flex h-16 w-full items-center justify-between bg-gradient-to-b to-transparent sm:h-20 lg:h-40">
+    <header className="from-background/50 px-bgx fixed inset-x-0 top-0 z-50 flex h-16 items-center justify-between bg-gradient-to-b to-transparent sm:h-20 lg:h-40">
       <Link href="/" aria-label="Go to home" className="shrink-0">
         <LogoText />
       </Link>
