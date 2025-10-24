@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="ko" suppressHydrationWarning>
       <body
-        className={`${notoSansKr.className} ${notoSansKr.variable} ${poppins.variable} min-w-auto antialiased`}
+        className={`${notoSansKr.className} ${notoSansKr.variable} ${poppins.variable} antialiased`}
       >
         <Providers>{children}</Providers>
       </body>

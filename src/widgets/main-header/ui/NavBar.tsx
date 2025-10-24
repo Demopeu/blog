@@ -1,16 +1,15 @@
 'use client';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 
-export default function NavBar() {
-  const pathname = usePathname();
+type NavBarProps = {
+    navItems: { href: string; label: string }[];
+};
 
-  const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/resume', label: 'Resume' },
-    { href: '/blog', label: 'Blog' },
-  ];
+export function NavBar({ navItems }: NavBarProps) {
+  const pathname = usePathname();
 
   return (
     <nav className="flex flex-nowrap items-center gap-3 text-[clamp(1rem,0.6rem_+_1.2vw,1.25rem)] font-semibold whitespace-nowrap sm:gap-5 lg:gap-6">
