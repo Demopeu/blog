@@ -1,15 +1,13 @@
-import { LogoLoop } from '@/shared/motion';
-import {
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-  SiTailwindcss,
-  SiPrettier,
-  SiPnpm,
-} from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiPrettier, SiPnpm } from 'react-icons/si';
 import Image from 'next/image';
 
-const techLogos = [
+type TechLogo = {
+  node: React.ReactNode;
+  title: string;
+  href: string;
+};
+
+export const techLogos: TechLogo[] = [
   { node: <SiReact />, title: 'React', href: 'https://react.dev' },
   { node: <SiNextdotjs />, title: 'Next.js', href: 'https://nextjs.org' },
   {
@@ -65,22 +63,3 @@ const techLogos = [
     href: 'https://feature-sliced.design/kr/',
   },
 ];
-
-export default function UseStackLogoLoop() {
-  return (
-    <div className="w-160">
-      <LogoLoop
-        logos={techLogos}
-        speed={30}
-        direction="left"
-        logoHeight={44}
-        gap={40}
-        pauseOnHover
-        scaleOnHover
-        fadeOut
-        ariaLabel="Technology partners"
-        className="scrollbar-none"
-      />
-    </div>
-  );
-}

@@ -1,19 +1,31 @@
 import { SplitText, RotatingText } from '@/shared/motion';
 
-export default function IntroArticle() {
+export function HeroText({
+  heroText,
+}: {
+  heroText: {
+    name: string;
+    firstLine: string;
+    secondLine: string;
+    thirdLine: string[];
+    fourthLine: string;
+    fifthLine: string[];
+    sixthLine: string;
+  };
+}) {
   return (
-    <article className="space-y-2 text-6xl font-bold">
+    <article className="space-y-2 text-4xl font-bold lg:text-5xl xl:text-6xl">
       <SplitText
-        text="오리엔탈 샐러드처럼"
+        text={heroText.firstLine}
         tag="h1"
         className="whitespace-nowrap"
       />
       <h1 className="flex flex-wrap items-baseline gap-3">
-        <SplitText text="어우러지는" tag="span" />
+        <SplitText text={heroText.secondLine} tag="span" />
         <SplitText
           text={
             <RotatingText
-              texts={['팀을', '코드를', '결과물을', '사용자 경험을']}
+              texts={heroText.thirdLine}
               initial={{ y: '200%' }}
               exit={{ y: '-230%' }}
               staggerDuration={0.05}
@@ -26,12 +38,14 @@ export default function IntroArticle() {
           className="bg-highlight-active flex items-center justify-center rounded-lg px-2 pt-0.5 pb-2"
         />
       </h1>
-      <SplitText text="만드는 개발자🥗" tag="span" />
+      <SplitText text={heroText.fourthLine} tag="span" />
       <div className="mt-8 ml-1 space-y-1 text-lg font-normal">
         <p>
-          FRONT-END 개발자 <b>김동현</b>입니다.
+          {heroText.fifthLine[0]}
+          <b className="ml-1">{heroText.name}</b>
+          {heroText.fifthLine[1]}
         </p>
-        <p>서비스의 흐름과 사용자 경험을 함께 설계하는 것을 지향합니다.</p>
+        <p>{heroText.sixthLine}</p>
       </div>
     </article>
   );
