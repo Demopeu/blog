@@ -6,9 +6,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 const nextConfig: NextConfig = {
-  experimental: {
-    reactCompiler: true,
-  },
+  reactCompiler: true,
 };
 
 export default withBundleAnalyzer(nextConfig);
