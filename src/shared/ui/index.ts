@@ -37,6 +37,7 @@ export {
   SidebarFooter,
   SidebarGroup,
   SidebarHeader,
+  useSidebar,
 } from './sidebar';
 export { Skeleton } from './skeleton';
 export { Tooltip } from './tooltip';

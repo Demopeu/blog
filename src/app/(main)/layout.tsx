@@ -1,5 +1,4 @@
 import { MainHeader } from '@/widgets/main-header';
-import { SidebarProvider, SidebarTrigger } from '@/shared/ui';
 import { Particles } from '@/shared/motion';
 
 export default function layout({ children }: { children: React.ReactNode }) {
@@ -18,10 +17,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
         />
       </div>
       <MainHeader />
-      <SidebarProvider>
-        <SidebarTrigger />
-        {children}
-      </SidebarProvider>
+      {children}
     </>
   );
 }

@@ -3,12 +3,9 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import { NavBarProps } from '@/widgets/main-header/model/nav-config';
 
-type NavBarProps = {
-    navItems: { href: string; label: string }[];
-};
-
-export function NavBar({ navItems }: NavBarProps) {
+export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
   const pathname = usePathname();
 
   return (
