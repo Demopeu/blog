@@ -1,11 +1,11 @@
 import { SsgoiTransition } from '@ssgoi/react';
-import { IntroSection } from '@/widgets/main/introsection';
+import { Hero } from '@/widgets/hero/ui/Hero';
 
 export default function Page() {
   return (
     <SsgoiTransition id="/">
       <main className="mt-mt px-bgx">
-        <IntroSection />
+        <Hero />
       </main>
     </SsgoiTransition>
   );

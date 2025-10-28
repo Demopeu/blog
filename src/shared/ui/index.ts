@@ -29,3 +29,16 @@ export {
 } from './card';
 export { LogoText } from './logo-text';
 export { Switch } from './switch';
+export {
+  Sidebar,
+  SidebarProvider,
+  SidebarTrigger,
+  SidebarContent,
+  SidebarFooter,
+  SidebarGroup,
+  SidebarHeader,
+} from './sidebar';
+export { Skeleton } from './skeleton';
+export { Tooltip } from './tooltip';
+export { Sheet } from './sheet';
+export { Separator } from './separator';
