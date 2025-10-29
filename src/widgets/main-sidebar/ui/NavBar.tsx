@@ -10,7 +10,7 @@ export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
   const pathname = usePathname();
 
   return (
-    <nav className="space-y-2 font-bold text-3xl">
+    <nav className="space-y-2 border-b-2 pb-8 text-3xl font-bold">
       {navItems.map(({ href, label }) => {
         const isActive = pathname === href;
         const key = label.toLowerCase() as keyof typeof iconMap;
@@ -30,7 +30,7 @@ export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
             )}
           >
             <div className="flex items-center gap-1.5">
-              {Icon ? <Icon className="size-6 mt-1" aria-hidden /> : null}
+              {Icon ? <Icon className="mt-1 size-6" aria-hidden /> : null}
               <p>{label}</p>
             </div>
           </Link>
