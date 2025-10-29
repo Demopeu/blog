@@ -1,5 +1,7 @@
 import { SidebarHeader } from '@/shared/ui';
 
 export function Header() {
-  return <SidebarHeader></SidebarHeader>;
+  return <SidebarHeader>
+    good
+  </SidebarHeader>;
 }

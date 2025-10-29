@@ -1,3 +1,8 @@
+import { Sidebar } from "@/shared/ui";
+import { Header } from "./Header";
+
 export function MainSidebar() {
-  return <div>good</div>;
+  return <Sidebar side="right" className="border-none shadow-none outline-none">
+    <Header />
+  </Sidebar>;
 }
