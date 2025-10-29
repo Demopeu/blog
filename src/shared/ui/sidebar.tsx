@@ -189,7 +189,7 @@ function Sidebar({
           data-sidebar="sidebar"
           data-slot="sidebar"
           data-mobile="true"
-          className="bg-sidebar text-sidebar-foreground w-(--sidebar-width) p-0 [&>button]:hidden"
+          className="bg-sidebar text-sidebar-foreground w-(--sidebar-width) p-0 [&>button]:hidden border-none shadow-none outline-none"
           style={
             {
               '--sidebar-width': SIDEBAR_WIDTH_MOBILE,
@@ -261,7 +261,6 @@ function SidebarTrigger({
   ...props
 }: React.ComponentProps<typeof Button>) {
   const { toggleSidebar } = useSidebar();
-
   return (
     <Button
       data-sidebar="trigger"
@@ -275,8 +274,8 @@ function SidebarTrigger({
       }}
       {...props}
     >
-      <PanelLeftIcon />
-      <span className="sr-only">Toggle Sidebar</span>
+      {' '}
+      <PanelLeftIcon /> <span className="sr-only">Toggle Sidebar</span>{' '}
     </Button>
   );
 }

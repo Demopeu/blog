@@ -14,7 +14,7 @@ export function HeroText({
   };
 }) {
   return (
-    <article className="space-y-2 text-4xl font-bold lg:text-5xl xl:text-6xl">
+    <article className="space-y-2 text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl">
       <SplitText
         text={heroText.firstLine}
         tag="h1"

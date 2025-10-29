@@ -1,6 +1,7 @@
 import { MainHeader } from '@/widgets/main-header';
-import { SidebarProvider, SidebarTrigger } from '@/shared/ui';
 import { Particles } from '@/shared/motion';
+import { SidebarProvider } from '@/shared/ui';
+import { MainSidebar } from '@/widgets/main-sidebar';
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
@@ -17,9 +18,9 @@ export default function layout({ children }: { children: React.ReactNode }) {
           disableRotation={false}
         />
       </div>
-      <MainHeader />
-      <SidebarProvider>
-        <SidebarTrigger />
+      <SidebarProvider defaultOpen={false}>
+        <MainHeader />
+        <MainSidebar /> 
         {children}
       </SidebarProvider>
     </>

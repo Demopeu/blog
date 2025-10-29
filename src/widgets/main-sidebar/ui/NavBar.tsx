@@ -4,14 +4,17 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { NavBarProps } from '@/widgets/main-header/model/nav-config';
+import { iconMap } from './IconMap';
 
 export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
   const pathname = usePathname();
 
   return (
-    <nav className="flex flex-nowrap items-center gap-3 text-[clamp(1rem,0.6rem_+_1.2vw,1.25rem)] font-semibold whitespace-nowrap sm:gap-5 lg:gap-6">
+    <nav className="space-y-2 border-b-2 pb-8 text-3xl font-bold">
       {navItems.map(({ href, label }) => {
         const isActive = pathname === href;
+        const key = label.toLowerCase() as keyof typeof iconMap;
+        const Icon = iconMap[key];
 
         return (
           <Link
@@ -19,18 +22,17 @@ export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
             href={href}
             aria-label={`Go to ${label.toLowerCase()}`}
             className={clsx(
-              'group -mx-1 inline-flex items-center px-2 py-1.5',
+              'group flex w-full items-center px-2 py-2',
               'transition-colors',
               isActive
                 ? 'text-highlight-active'
-                : 'text-foreground hover:text-highlight-hover',
-              'relative after:absolute after:right-2 after:-bottom-0.5 after:left-2 after:h-[2px] sm:after:h-[3px]',
-              'after:origin-left after:scale-x-0 group-hover:after:scale-x-100',
-              isActive && 'after:scale-x-100',
-              'after:bg-current after:transition-transform after:duration-200'
+                : 'text-foreground hover:text-highlight-hover'
             )}
           >
-            {label}
+            <div className="flex items-center gap-1.5">
+              {Icon ? <Icon className="mt-1 size-6" aria-hidden /> : null}
+              <p>{label}</p>
+            </div>
           </Link>
         );
       })}

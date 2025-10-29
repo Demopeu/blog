@@ -11,7 +11,7 @@ export function Hero() {
         <HeroText heroText={heroText} />
         <UseStackLogoLoop techLogos={techLogos} />
       </div>
-      <HoverImage />
+      <HoverImage src="/dummy.png" srcHover="/dummy2.png"/>
     </section>
   );
 }
