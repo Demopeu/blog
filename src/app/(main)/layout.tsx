@@ -2,6 +2,7 @@ import { MainHeader } from '@/widgets/main-header';
 import { Particles } from '@/shared/motion';
 import { SidebarProvider } from '@/shared/ui';
 import { MainSidebar } from '@/widgets/main-sidebar';
+import { MainFooter } from '@/widgets/main-footer';
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
@@ -20,9 +21,10 @@ export default function layout({ children }: { children: React.ReactNode }) {
       </div>
       <SidebarProvider defaultOpen={false}>
         <MainHeader />
-        <MainSidebar /> 
+        <MainSidebar />
         {children}
       </SidebarProvider>
+      <MainFooter />
     </>
   );
 }
