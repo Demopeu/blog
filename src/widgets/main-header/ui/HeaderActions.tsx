@@ -6,11 +6,11 @@ import { SideBarToggle } from '@/features/sidebar-toggle';
 export function HeaderActions({ navItems }: { navItems: NavBarProps[] }) {
   return (
     <>
-      <div className="hidden items-center gap-3 sm:flex">
+      <div className="hidden items-center gap-3 md:flex">
         <NavBar navItems={navItems} />
         <ThemeToggle />
       </div>
-      <div className="sm:hidden">
+      <div className="md:hidden">
         <SideBarToggle />
       </div>
     </>

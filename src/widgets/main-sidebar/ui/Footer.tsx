@@ -1,5 +1,7 @@
 import { SidebarFooter } from '@/shared/ui';
 
 export function Footer() {
-  return <SidebarFooter></SidebarFooter>;
+  return <SidebarFooter>
+    good
+  </SidebarFooter>;
 }
