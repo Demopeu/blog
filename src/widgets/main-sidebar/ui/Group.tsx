@@ -1,4 +1,4 @@
-import { SidebarGroup } from '@/shared/ui';
+import { SidebarGroup } from '@/shared/ui/shadcn';
 import { NavBar } from './NavBar';
 import { NavBarProps } from '@/widgets/main-header/model/nav-config';
 

@@ -1,4 +1,4 @@
-import { SidebarHeader } from '@/shared/ui';
+import { SidebarHeader } from '@/shared/ui/shadcn';
 import { HoverImage } from '@/widgets/main-sidebar/ui/HoverImage';
 
 export function Header() {

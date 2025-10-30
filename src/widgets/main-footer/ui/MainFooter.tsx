@@ -4,7 +4,7 @@ import { Github } from '@/shared/icon';
 
 export function MainFooter() {
   return (
-    <footer className="px-bgx border-t-foreground/50 absolute inset-x-0 bottom-0 hidden w-full items-center justify-between border-t py-10 md:flex">
+    <footer className="px-bgx border-t-foreground/50 py-sgx absolute inset-x-0 bottom-0 hidden w-full items-center justify-between border-t md:flex">
       <div className="space-y-2">
         <p className="text-foreground/50 text-sm font-semibold">
           {infoConfig.naver}
