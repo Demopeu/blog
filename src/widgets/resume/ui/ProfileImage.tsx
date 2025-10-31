@@ -6,13 +6,14 @@ export function ProfileImage({
   imageConfig: { src: string };
 }) {
   return (
-    <section className="mx-gx flex items-center justify-center">
+    <div className="relative aspect-square w-40 overflow-hidden rounded-full">
       <Image
         src={imageConfig.src}
         alt="Profile Image"
-        width={300}
-        height={300}
+        fill
+        className="object-cover"
+        sizes="100vw"
       />
-    </section>
+    </div>
   );
 }

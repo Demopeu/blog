@@ -48,6 +48,7 @@
   --spacing-gx: var(--gutter-x);
   --spacing-bgx: var(--big-gutter-x);
   --spacing-sgx: var(--small-gutter-x);
+  --spacing-bmt: var(--big-section-y);
   --spacing-mt: var(--section-y);
 }
 
@@ -92,6 +93,7 @@
   --big-gutter-x: clamp(20px, 12vw, 240px);
   --small-gutter-x: clamp(8px, 6vw, 40px);
   --section-y: clamp(48px, 6vw, 160px);
+  --big-section-y: clamp(100px, 16vw, 160px);
   --page-max: min(96rem, 94vw);
   --col-min: 18rem;
   --gap: clamp(12px, 2vw, 24px);

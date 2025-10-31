@@ -7,5 +7,5 @@ export function MainWrapper({
   children: React.ReactNode;
   className?: string;
 }) {
-  return <main className={cn('mt-mt px-bgx', className)}>{children}</main>;
+  return <main className={cn('px-bgx mt-bmt', className)}>{children}</main>;
 }
