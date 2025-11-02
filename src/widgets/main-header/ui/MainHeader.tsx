@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { LogoText } from '@/shared/ui';
+import { LogoText } from '@/shared/ui/shadcn';
 import { navItems } from '@/widgets/main-header/model/nav-config';
 import { HeaderActions } from '@/widgets/main-header/ui/HeaderActions';
 

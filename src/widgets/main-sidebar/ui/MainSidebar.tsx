@@ -1,4 +1,4 @@
-import { Sidebar } from '@/shared/ui';
+import { Sidebar } from '@/shared/ui/shadcn';
 import { Header } from './Header';
 import { SideBarToggle } from '@/features/sidebar-toggle';
 import { Footer } from './Footer';

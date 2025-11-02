@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Poppins, Noto_Sans_KR } from 'next/font/google';
-import './globals.css';
+import './styles/base.css';
 import { Providers } from '@/shared/provider/providers';
 
 const notoSansKr = Noto_Sans_KR({

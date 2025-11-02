@@ -1,6 +1,6 @@
 import { MainHeader } from '@/widgets/main-header';
 import { Particles } from '@/shared/motion';
-import { SidebarProvider } from '@/shared/ui';
+import { SidebarProvider } from '@/shared/ui/shadcn';
 import { MainSidebar } from '@/widgets/main-sidebar';
 import { MainFooter } from '@/widgets/main-footer';
 
@@ -19,12 +19,12 @@ export default function layout({ children }: { children: React.ReactNode }) {
           disableRotation={false}
         />
       </div>
-      <SidebarProvider defaultOpen={false}>
+      <SidebarProvider defaultOpen={false} className="md:flex-col">
         <MainHeader />
         <MainSidebar />
         {children}
+        <MainFooter />
       </SidebarProvider>
-      <MainFooter />
     </>
   );
 }

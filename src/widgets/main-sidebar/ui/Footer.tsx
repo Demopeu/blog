@@ -1,4 +1,4 @@
-import { SidebarFooter } from '@/shared/ui';
+import { SidebarFooter } from '@/shared/ui/shadcn';
 import { Github } from '@/shared/icon';
 import Link from 'next/link';
 

@@ -1,0 +1,5 @@
+@media (min-width: 1280px) {
+  :root {
+    --gutter-x: clamp(24px, 3vw, 80px);
+  }
+}
