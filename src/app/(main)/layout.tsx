@@ -19,12 +19,12 @@ export default function layout({ children }: { children: React.ReactNode }) {
           disableRotation={false}
         />
       </div>
-      <SidebarProvider defaultOpen={false}>
+      <SidebarProvider defaultOpen={false} className="md:flex-col">
         <MainHeader />
         <MainSidebar />
         {children}
+        <MainFooter />
       </SidebarProvider>
-      <MainFooter />
     </>
   );
 }

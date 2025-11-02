@@ -1,10 +1,16 @@
 import Image from 'next/image';
 import s from './hover-image.module.css';
 
-export function HoverImage({src, srcHover}: {src: string, srcHover: string}) {
+export function HoverImage({
+  src,
+  srcHover,
+}: {
+  src: string;
+  srcHover: string;
+}) {
   return (
     <div
-      className={`group relative hidden select-none 2xl:block 2xl:size-[min(38vw,640px)] 2xl:scale-105 ${s.bouncyHover}`}
+      className={`group relative hidden select-none xl:block xl:size-80 2xl:size-96 2xl:scale-130 ${s.bouncyHover}`}
     >
       <Image
         src={src}
