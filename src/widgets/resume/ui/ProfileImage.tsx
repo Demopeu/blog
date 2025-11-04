@@ -6,7 +6,7 @@ export function ProfileImage({
   imageConfig: { src: string };
 }) {
   return (
-    <div className="relative aspect-square w-40 overflow-hidden rounded-full">
+    <div className="relative aspect-square w-40 md:w-60 overflow-hidden rounded-full">
       <Image
         src={imageConfig.src}
         alt="Profile Image"

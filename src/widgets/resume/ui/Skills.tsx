@@ -1,9 +1,12 @@
-export function Skills() {
+import { SectionHeader } from "./SectionHeader";
+import { FlowingMenu } from "@/shared/motion";
+import { SkillGroup } from "@/widgets/resume/model/skills-config";
+
+export function Skills({skillsGroups}: {skillsGroups: SkillGroup[]}) {
   return (
-    <section>
-      <h2 className="border-highlight border-l-5 pl-2 text-2xl font-black">
-        Skills
-      </h2>
+    <section className="space-y-2 md:space-y-6">
+      <SectionHeader title="Skills" />
+      <FlowingMenu groups={skillsGroups} className="h-96" enableLink={false} />
     </section>
   );
 }
