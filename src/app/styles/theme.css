@@ -38,6 +38,7 @@
   --radius-xl: calc(var(--radius) + 4px);
   --color-highlight-hover: var(--highlight-hover);
   --color-highlight-active: var(--highlight-active);
+  --color-highlight: var(--highlight);
   --color-toggle-color: var(--toggle-color);
 
   --spacing-gx: var(--gutter-x);

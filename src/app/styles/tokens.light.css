@@ -33,6 +33,7 @@
   --sidebar-ring: oklch(0.708 0 0);
   --highlight-hover: oklch(0.7 0.24 27);
   --highlight-active: oklch(0.7 0.24 27);
+  --highlight: oklch(0.7 0.24 27);
   --toggle-color: oklch(0.81 0.08 225.75);
 
   --gutter-x: clamp(16px, 4vw, 64px);
