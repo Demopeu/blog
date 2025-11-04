@@ -1,6 +1,6 @@
 import { cn } from '@/shared/lib/utils';
 
-export function SectionHeader({
+export function ArticleHeader({
   title,
   className,
 }: {

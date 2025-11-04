@@ -6,13 +6,13 @@ export function ProfileImage({
   imageConfig: { src: string };
 }) {
   return (
-    <div className="relative aspect-square w-40 md:w-60 overflow-hidden rounded-full">
+    <div className="relative aspect-square w-40 overflow-hidden rounded-full md:w-60">
       <Image
         src={imageConfig.src}
         alt="Profile Image"
         fill
         className="object-cover"
-        sizes="100vw"
+        sizes="100%"
       />
     </div>
   );

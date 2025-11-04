@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React from 'react';
 import { gsap } from 'gsap';
@@ -25,30 +25,48 @@ interface FlowingMenuProps {
   enableLink?: boolean;
 }
 
-const FlowingMenuContainer = ({ className, children }: { className?: string; children: React.ReactNode }) => {
+const FlowingMenuContainer = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) => {
   return <div className={className}>{children}</div>;
 };
-  
 
-const FlowingMenu: React.FC<FlowingMenuProps> = ({ items = [], groups, className, enableLink = true }) => {
+const FlowingMenu: React.FC<FlowingMenuProps> = ({
+  items = [],
+  groups,
+  className,
+  enableLink = true,
+}) => {
   const resolvedGroups = React.useMemo(() => {
     if (groups && groups.length) {
       const first = (groups as Group[])[0];
       if (Array.isArray(first)) {
-        return (groups as MenuEntry[][]).map((entries) => ({ entries })) as Group[];
+        return (groups as MenuEntry[][]).map((entries) => ({
+          entries,
+        })) as Group[];
       }
       return groups as Group[];
     }
-    if (items && items.length) return items.map((it) => ({ entries: [it] })) as Group[];
+    if (items && items.length)
+      return items.map((it) => ({ entries: [it] })) as Group[];
     return [] as Group[];
   }, [groups, items]);
 
   return (
     <FlowingMenuContainer className={className}>
-      <div className="w-full h-full overflow-hidden">
-        <nav className="flex flex-col h-full m-0 p-0">
+      <div className="h-full w-full overflow-hidden">
+        <nav className="m-0 flex h-full flex-col p-0">
           {resolvedGroups.map(({ entries, title }, idx) => (
-            <MenuItem key={idx} entries={entries} title={title} enableLink={enableLink} />
+            <MenuItem
+              key={idx}
+              entries={entries}
+              title={title}
+              enableLink={enableLink}
+            />
           ))}
         </nav>
       </div>
@@ -56,37 +74,63 @@ const FlowingMenu: React.FC<FlowingMenuProps> = ({ items = [], groups, className
   );
 };
 
-const MenuItem: React.FC<MenuItemProps> = ({ entries, enableLink = true, title }) => {
+const MenuItem: React.FC<MenuItemProps> = ({
+  entries,
+  enableLink = true,
+  title,
+}) => {
   const itemRef = React.useRef<HTMLDivElement>(null);
   const marqueeRef = React.useRef<HTMLDivElement>(null);
   const marqueeInnerRef = React.useRef<HTMLDivElement>(null);
 
   const animationDefaults = { duration: 0.6, ease: 'expo' };
 
-  const findClosestEdge = (mouseX: number, mouseY: number, width: number, height: number): 'top' | 'bottom' => {
+  const findClosestEdge = (
+    mouseX: number,
+    mouseY: number,
+    width: number,
+    height: number
+  ): 'top' | 'bottom' => {
     const topEdgeDist = Math.pow(mouseX - width / 2, 2) + Math.pow(mouseY, 2);
-    const bottomEdgeDist = Math.pow(mouseX - width / 2, 2) + Math.pow(mouseY - height, 2);
+    const bottomEdgeDist =
+      Math.pow(mouseX - width / 2, 2) + Math.pow(mouseY - height, 2);
     return topEdgeDist < bottomEdgeDist ? 'top' : 'bottom';
   };
 
   const handleMouseEnter: React.MouseEventHandler<HTMLDivElement> = (ev) => {
-    if (!itemRef.current || !marqueeRef.current || !marqueeInnerRef.current) return;
+    if (!itemRef.current || !marqueeRef.current || !marqueeInnerRef.current)
+      return;
     const rect = itemRef.current.getBoundingClientRect();
-    const edge = findClosestEdge(ev.clientX - rect.left, ev.clientY - rect.top, rect.width, rect.height);
+    const edge = findClosestEdge(
+      ev.clientX - rect.left,
+      ev.clientY - rect.top,
+      rect.width,
+      rect.height
+    );
 
     gsap.killTweensOf([marqueeRef.current, marqueeInnerRef.current]);
     gsap.set(marqueeRef.current, { y: edge === 'top' ? '-101%' : '101%' });
     gsap.set(marqueeInnerRef.current, { y: edge === 'top' ? '101%' : '-101%' });
-    gsap.to([marqueeRef.current, marqueeInnerRef.current], { y: '0%', ...animationDefaults });
+    gsap.to([marqueeRef.current, marqueeInnerRef.current], {
+      y: '0%',
+      ...animationDefaults,
+    });
   };
 
   const handleMouseLeave: React.MouseEventHandler<HTMLDivElement> = (ev) => {
-    if (!itemRef.current || !marqueeRef.current || !marqueeInnerRef.current) return;
+    if (!itemRef.current || !marqueeRef.current || !marqueeInnerRef.current)
+      return;
     const rect = itemRef.current.getBoundingClientRect();
-    const edge = findClosestEdge(ev.clientX - rect.left, ev.clientY - rect.top, rect.width, rect.height);
+    const edge = findClosestEdge(
+      ev.clientX - rect.left,
+      ev.clientY - rect.top,
+      rect.width,
+      rect.height
+    );
 
     gsap.killTweensOf([marqueeRef.current, marqueeInnerRef.current]);
-    gsap.timeline({ defaults: animationDefaults })
+    gsap
+      .timeline({ defaults: animationDefaults })
       .to(marqueeRef.current, { y: edge === 'top' ? '-101%' : '101%' }, 0)
       .to(marqueeInnerRef.current, { y: edge === 'top' ? '101%' : '-101%' }, 0)
       .set(marqueeInnerRef.current, { y: 0 });
@@ -100,10 +144,12 @@ const MenuItem: React.FC<MenuItemProps> = ({ entries, enableLink = true, title }
         {entries.map((e, idx) => (
           <React.Fragment key={`${loopIdx}-${idx}`}>
             <div className="flex items-center gap-[2vw]">
-              <span className="text-background uppercase font-black text-4xl md:text-5xl leading-[1] text-center ml-[2vw]">{e.text}</span>
-              <div className='w-20'>
+              <span className="text-background ml-[2vw] text-center text-4xl leading-[1] font-black uppercase md:text-5xl">
+                {e.text}
+              </span>
+              <div className="w-20">
                 <Image src={e.image} alt={e.text} width={200} height={200} />
-              </div>  
+              </div>
             </div>
           </React.Fragment>
         ))}
@@ -113,29 +159,29 @@ const MenuItem: React.FC<MenuItemProps> = ({ entries, enableLink = true, title }
 
   return (
     <div
-      className="flex-1 relative overflow-hidden text-center shadow-[0_-3px]"
+      className="divide-foreground relative flex-1 divide-y-2 overflow-hidden text-center"
       ref={itemRef}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {enableLink && !title && entries[0]?.link ? (
         <a
-          className="flex items-center justify-center h-full relative cursor-pointer uppercase no-underline font-semibold text-background text-[4vh] hover:text-foreground focus:text-foreground focus-visible:text-foreground"
+          className="text-background hover:text-foreground focus:text-foreground focus-visible:text-foreground relative flex h-full cursor-pointer items-center justify-center text-[4vh] font-semibold uppercase no-underline"
           href={entries[0].link}
         >
           {displayText}
         </a>
       ) : (
-        <span className="flex items-center justify-center h-full relative uppercase font-black text-foreground text-4xl md:text-5xl">
+        <span className="text-foreground relative flex h-full items-center justify-center text-4xl font-black uppercase md:text-5xl">
           {displayText}
         </span>
       )}
       <div
-        className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none bg-foreground translate-y-[101%]"
+        className="bg-foreground pointer-events-none absolute top-0 left-0 h-full w-full translate-y-[101%] overflow-hidden"
         ref={marqueeRef}
       >
-        <div className="h-full w-[200%] flex" ref={marqueeInnerRef}>
-          <div className="flex items-center relative h-full w-[200%] will-change-transform animate-marquee">
+        <div className="flex h-full w-[200%]" ref={marqueeInnerRef}>
+          <div className="animate-marquee relative flex h-full w-[200%] items-center will-change-transform">
             {repeatedMarqueeContent}
           </div>
         </div>
