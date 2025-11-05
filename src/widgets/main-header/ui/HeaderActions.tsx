@@ -1,6 +1,6 @@
-import { NavBar } from '@/widgets/main-header/ui/NavBar';
+import { NavBar } from './NavBar';
 import { ThemeToggle } from '@/features/theme-toggle';
-import { NavBarProps } from '@/widgets/main-header/model/nav-config';
+import { NavBarProps } from '../consts/nav';
 import { SideBarToggle } from '@/features/sidebar-toggle';
 
 export function HeaderActions({ navItems }: { navItems: NavBarProps[] }) {

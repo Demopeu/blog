@@ -1,7 +1,7 @@
 import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiPrettier, SiPnpm } from 'react-icons/si';
 import Image from 'next/image';
 
-type TechLogo = {
+export type TechLogo = {
   node: React.ReactNode;
   title: string;
   href: string;

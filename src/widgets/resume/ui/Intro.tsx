@@ -1,6 +1,7 @@
 import { ProfileImage } from './ProfileImage';
+import { imageConfig } from '../consts/image';
 
-export function Intro({ imageConfig }: { imageConfig: { src: string } }) {
+export function Intro() { 
   return (
     <section className="flex flex-col items-center justify-center gap-4">
       <ProfileImage imageConfig={imageConfig} />

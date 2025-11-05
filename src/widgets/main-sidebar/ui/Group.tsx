@@ -1,6 +1,6 @@
 import { SidebarGroup } from '@/shared/ui/shadcn';
 import { NavBar } from './NavBar';
-import { NavBarProps } from '@/widgets/main-header/model/nav-config';
+import { NavBarProps } from '../consts/nav-config';
 
 export function Group({ navItems }: { navItems: NavBarProps[] }) {
   return (
