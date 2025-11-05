@@ -8,7 +8,7 @@ type HeroText = {
   sixthLine: string;
 };
 
-const name = '김동현';
+const name: string = '김동현';
 
 export const heroText: HeroText = {
   name,

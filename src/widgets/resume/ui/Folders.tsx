@@ -1,11 +1,11 @@
-import { SectionWrapper } from '@/widgets/resume/ui/section-wrapper';
-import { AtticleFolder } from '@/widgets/resume/ui/AtticleFolder';
-import { FoldersProps } from '@/widgets/resume/model/folder-config';
+import { SectionWrapper } from './section-wrapper';
+import { AtticleFolder } from './AtticleFolder';
+import { foldersConfig } from '../consts/folder';
 
-export function Folders({ folderConfig }: { folderConfig: FoldersProps[] }) {
+export function Folders() {
   return (
     <SectionWrapper className="items-center justify-between md:flex-row">
-      {folderConfig.map((folder) => (
+      {foldersConfig.map((folder) => (
         <AtticleFolder
           key={folder.title}
           title={folder.title}

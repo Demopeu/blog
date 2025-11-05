@@ -1,4 +1,4 @@
-import { infoConfig } from '@/widgets/main-footer/model/info-config';
+import { infoConfig } from '../consts/info';
 import Link from 'next/link';
 import { Github } from '@/shared/icon';
 

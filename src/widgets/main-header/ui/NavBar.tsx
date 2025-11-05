@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
-import { NavBarProps } from '@/widgets/main-header/model/nav-config';
+import { NavBarProps } from '../consts/nav';
 
 export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
   const pathname = usePathname();

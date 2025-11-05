@@ -3,7 +3,7 @@ import { Header } from './Header';
 import { SideBarToggle } from '@/features/sidebar-toggle';
 import { Footer } from './Footer';
 import { Group } from './Group';
-import { navItems } from '@/widgets/main-sidebar/model/nav-config';
+import { navItems } from '../consts/nav-config';
 import { ThemeToggle } from '@/features/theme-toggle';
 
 export function MainSidebar() {

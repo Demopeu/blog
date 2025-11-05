@@ -1,8 +1,8 @@
 import { HeroText } from './HeroText';
 import { UseStackLogoLoop } from './UseStackLogoLoop';
 import { HoverImage } from './HoverImage';
-import { techLogos } from '@/widgets/hero/model/tech-logo';
-import { heroText } from '@/widgets/hero/model/hero-text';
+import { techLogos } from '../consts/tech-logo';
+import { heroText } from '../consts/hero-text';
 
 export function Hero() {
   return (

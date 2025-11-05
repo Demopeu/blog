@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
-import { NavBarProps } from '@/widgets/main-header/model/nav-config';
-import { iconMap } from './IconMap';
+import { NavBarProps } from '../consts/nav-config';
+import { iconMap } from '../lib/IconMap';
 
 export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
   const pathname = usePathname();
