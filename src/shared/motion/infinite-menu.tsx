@@ -1114,7 +1114,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
             className={`
           select-none
           absolute
-          left-[0.5%] md:left-[3%] lg:left-[10%] xl:left-[15%]
+          left-[0.5%] md:left-[3%] lg:left-[10%] xl:left-[10%]
           top-1/2
           transform
           translate-x-[25%] md:translate-x-[22%] lg:translate-x-[20%] xl:translate-x-[18%]
@@ -1122,7 +1122,8 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
           font-semibold md:font-bold lg:font-extrabold xl:font-black
-          text-2xl md:text-3xl lg:text-4xl xl:text-5xl
+          text-xl md:text-3xl lg:text-4xl xl:text-5xl
+          whitespace-pre-wrap leading-[1.2]
           ${
             isMoving
               ? 'opacity-0 pointer-events-none duration-[100ms]'
@@ -1137,13 +1138,14 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({ items = [] }) => {
             className={`
           select-none
           absolute
-          max-w-[10ch]
+          max-w-[18ch]
           top-1/2
-          right-[0%] md:right-[3%] lg:right-[10%] xl:right-[15%]
+          left-[82%] xl:right-[2%]
           transition-all
           ease-[cubic-bezier(0.25,0.1,0.25,1.0)]
-          text-xs md:text-sm lg:text-base xl:text-lg
+          text-[9px] md:text-sm lg:text-base xl:text-lg
           font-normal md:font-medium lg:font-semibold xl:font-bold
+          whitespace-pre-wrap leading-[1.3]
           ${
             isMoving
               ? 'opacity-0 pointer-events-none duration-[100ms] translate-x-[-50%] md:translate-x-[-52%] lg:translate-x-[-55%] xl:translate-x-[-58%] -translate-y-1/2'
