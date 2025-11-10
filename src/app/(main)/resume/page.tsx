@@ -1,7 +1,6 @@
-import { Intro, Skills, Folders } from '@/widgets/resume';
+import { Intro, Skills, Folders, Portfolio } from '@/widgets/resume';
 import { SsgoiTransition } from '@ssgoi/react';
 import { MainWrapper } from '@/shared/ui/layout';
-import { Portfolio } from '@/widgets/resume/ui/Portfolio';
 
 export default function page() {
   return (
