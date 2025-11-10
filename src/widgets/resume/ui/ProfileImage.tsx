@@ -12,7 +12,9 @@ export function ProfileImage({
         alt="Profile Image"
         fill
         className="object-cover"
-        sizes="100%"
+        sizes="(max-width: 768px) 160px, 240px"
+        priority
+        fetchPriority="high"
       />
     </div>
   );

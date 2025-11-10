@@ -11,7 +11,7 @@ export function MainFooter() {
         </p>
       </div>
       <div className="flex items-center gap-2">
-        <Link href="https://github.com/demopeu">
+        <Link href="https://github.com/demopeu" aria-label="Demopeu's Github">
           <Github className="size-8" aria-hidden />
         </Link>
       </div>

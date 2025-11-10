@@ -18,6 +18,7 @@ export function Portfolio() {
   className="[--switch-w:2.5rem] [--switch-h:1.25rem] [--thumb:1.1rem]"
   checked={view === 'Carousel'}
   onCheckedChange={(checked) => setView(checked ? 'Carousel' : 'Infinite')}
+  aria-label="Portfolio View"
 />
       </div>
       <MultiActivityPane 
