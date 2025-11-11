@@ -46,4 +46,6 @@
   --spacing-sgx: var(--small-gutter-x);
   --spacing-bmt: var(--big-section-y);
   --spacing-mt: var(--section-y);
+
+  --text-very-pretty: var(--text-very-pretty);
 }
