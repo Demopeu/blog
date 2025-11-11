@@ -28,6 +28,7 @@ export function CarouselCard({ item }: { item: CarouselItem }) {
             alt="portfolio image"
             fill
             className="object-cover object-center"
+            sizes="(max-width: 640px) 82vw, (max-width: 768px) 75vw, (max-width: 1024px) 62vw, 40vw"
           />
           <div
             className={cn(
@@ -71,7 +72,7 @@ export function CarouselCard({ item }: { item: CarouselItem }) {
               </span>
             ))}
           </div>
-          <Link href={item.link} className="ml-auto">
+          <Link href={item.link} className="ml-auto" aria-label="Demopeu's Github">
             <Github className="size-6" />
           </Link>
         </div>
