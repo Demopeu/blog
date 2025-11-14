@@ -59,7 +59,7 @@ export const carouselItems: CarouselItem[] = [
     contribution: [
       'Turborepo로 모노레포 구성 및 공통 UI/설정 분리',
       '서버 액션, Parallel Routes, 캐싱 전략 등 Next.js 심화 구조 도입',
-      'WebRTC, HLS, SSE, FCM 등 실시간/스트리밍/알림 기능 구현',
+      'WebSocket, HLS, SSE, FCM 등 실시간/스트리밍/알림 기능 구현',
       'TanStack Query를 활용한 상태 관리',
       'NextAuth.js 기반 인증 시스템',
       'SEO 최적화'
