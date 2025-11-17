@@ -27,7 +27,6 @@ export {
   CardDescription,
   CardContent,
 } from './card';
-export { LogoText } from './logo-text';
 export { Switch } from './switch';
 export {
   Sidebar,

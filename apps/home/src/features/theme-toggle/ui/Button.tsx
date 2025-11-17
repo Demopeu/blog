@@ -1,6 +1,6 @@
 import { Sun, Moon, Cloud, Star } from 'lucide-react';
 import s from '@/features/theme-toggle/ui/button.module.css';
-import { cn } from '@/shared/lib/utils';
+import { cn } from '@repo/ui/lib/utils';
 
 type ButtonProps = {
   mounted: boolean;
@@ -43,11 +43,11 @@ export default function Button({
           style={{ color: '#FFA500', fill: '#FFA500' }}
         />
         <Cloud
-          className="pointer-events-none absolute top-3 -left-8 h-12 w-12 text-white"
+          className="pointer-events-none absolute -left-8 top-3 h-12 w-12 text-white"
           style={{ color: '#FFFFFF', fill: '#FFFFFF' }}
         />
         <Cloud
-          className="pointer-events-none absolute top-1 left-7 h-8 w-8 text-white"
+          className="pointer-events-none absolute left-7 top-1 h-8 w-8 text-white"
           style={{ color: '#FFFFFF', fill: '#FFFFFF' }}
         />
       </div>
@@ -62,19 +62,19 @@ export default function Button({
           style={{ color: '#FFD700', fill: '#FFD700' }}
         />
         <Star
-          className="pointer-events-none absolute -top-3 -left-3 h-4 w-4"
+          className="pointer-events-none absolute -left-3 -top-3 h-4 w-4"
           style={{ color: '#FFFFFF', fill: '#FFFFFF' }}
         />
         <Star
-          className="pointer-events-none absolute top-6 -left-6 h-3 w-3"
+          className="pointer-events-none absolute -left-6 top-6 h-3 w-3"
           style={{ color: '#FFFFFF', fill: '#FFFFFF' }}
         />
         <Star
-          className="pointer-events-none absolute top-4 left-8 h-3 w-3"
+          className="pointer-events-none absolute left-8 top-4 h-3 w-3"
           style={{ color: '#FFFFFF', fill: '#FFFFFF' }}
         />
         <Star
-          className="pointer-events-none absolute top-1 left-12 h-2 w-2"
+          className="pointer-events-none absolute left-12 top-1 h-2 w-2"
           style={{ color: '#FFFFFF', fill: '#FFFFFF' }}
         />
       </div>

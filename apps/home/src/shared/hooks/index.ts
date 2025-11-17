@@ -1,1 +1,1 @@
-export {useIsMobile} from './use-mobile';
+export { useFlag } from './use-flag';

@@ -1,4 +1,4 @@
-import { cn } from '@/shared/lib/utils';
+import { cn } from '@repo/ui/lib/utils';
 
 export function SectionHeader({
   title,
@@ -10,7 +10,7 @@ export function SectionHeader({
   return (
     <h2
       className={cn(
-        'border-highlight flex flex-col border-l-5 pl-2 text-2xl font-black md:pl-4 md:text-3xl',
+        'border-highlight border-l-5 flex flex-col pl-2 text-2xl font-black md:pl-4 md:text-3xl',
         className
       )}
     >

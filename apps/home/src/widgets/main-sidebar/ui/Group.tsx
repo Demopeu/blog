@@ -1,4 +1,4 @@
-import { SidebarGroup } from '@/shared/ui/shadcn';
+import { SidebarGroup } from '@repo/ui/components';
 import { NavBar } from './NavBar';
 import { NavBarProps } from '../consts/nav-config';
 

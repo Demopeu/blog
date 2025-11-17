@@ -1,6 +1,6 @@
 'use client';
 
-import { useSidebar } from '@/shared/ui/shadcn';
+import { useSidebar } from '@repo/ui/components';
 import { Button } from './Button';
 
 export function SideBarToggle({ className }: { className?: string }) {

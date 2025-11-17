@@ -1,4 +1,4 @@
-import { Sidebar } from '@/shared/ui/shadcn';
+import { Sidebar } from '@repo/ui/components';
 import { Header } from './Header';
 import { SideBarToggle } from '@/features/sidebar-toggle';
 import { Footer } from './Footer';
@@ -9,7 +9,7 @@ import { ThemeToggle } from '@/features/theme-toggle';
 export function MainSidebar() {
   return (
     <Sidebar side="right" className="border-none shadow-none outline-none">
-      <div className="mt-4 mr-1 flex items-center justify-end">
+      <div className="mr-1 mt-4 flex items-center justify-end">
         <ThemeToggle className="size-7 bg-transparent" />
         <SideBarToggle />
       </div>

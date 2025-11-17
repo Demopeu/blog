@@ -4,25 +4,25 @@ import { CarouselItem } from '../consts/portfolio';
 import { Github } from '@/shared/icon';
 import { useFlag } from '@/shared/hooks/use-flag';
 import Link from 'next/link';
-import { cn } from '@/shared/lib/utils';
+import { cn } from '@repo/ui/lib/utils';
 import Image from 'next/image';
 
 export function CarouselCard({ item }: { item: CarouselItem }) {
   const [flag, toggle] = useFlag();
 
   return (
-    <article className="m-4 shrink-0 basis-9/11 sm:basis-6/8 md:basis-5/8 lg:basis-2/5">
+    <article className="basis-9/11 sm:basis-6/8 md:basis-5/8 m-4 shrink-0 lg:basis-2/5">
       <div
         className={cn(
-          'group text-foreground text-very-pretty relative h-full w-full rounded-lg',
-          'transition-transform duration-700 transform-3d',
+          'text-foreground text-very-pretty group relative h-full w-full rounded-lg',
+          'transform-3d transition-transform duration-700',
           'transform-gpu will-change-transform',
-          'shadow-[0_0_.6rem_0_rgb(68_68_68_/_82%)]',
+          'shadow-[0_0_.6rem_0_rgb(68_68_68/82%)]',
           flag && 'rotate-y-180'
         )}
         onClick={toggle}
       >
-        <div className="absolute inset-0 overflow-hidden rounded-lg shadow-[0_0_.6rem_0_rgb(68_68_68_/_82%)] backface-hidden">
+        <div className="backface-hidden absolute inset-0 overflow-hidden rounded-lg shadow-[0_0_.6rem_0_rgb(68_68_68/82%)]">
           <Image
             src={item.image}
             alt="portfolio image"
@@ -46,7 +46,7 @@ export function CarouselCard({ item }: { item: CarouselItem }) {
             </div>
           </div>
         </div>
-        <div className="flex rotate-y-180 flex-col gap-2 p-4 backface-hidden">
+        <div className="rotate-y-180 backface-hidden flex flex-col gap-2 p-4">
           <h1 className="bg-highlight mb-2 w-fit rounded-lg px-4 py-1 text-base font-extrabold text-white">
             {item.title}
             {item.subtitle && (
@@ -66,13 +66,17 @@ export function CarouselCard({ item }: { item: CarouselItem }) {
             {item.stack.map((tech) => (
               <span
                 key={tech}
-                className="border-border bg-muted text-foreground/80 rounded-full border px-2 py-0.5 text-xs whitespace-nowrap"
+                className="border-border bg-muted text-foreground/80 whitespace-nowrap rounded-full border px-2 py-0.5 text-xs"
               >
                 {tech}
               </span>
             ))}
           </div>
-          <Link href={item.link} className="ml-auto" aria-label="Demopeu's Github">
+          <Link
+            href={item.link}
+            className="ml-auto"
+            aria-label="Demopeu's Github"
+          >
             <Github className="size-6" />
           </Link>
         </div>

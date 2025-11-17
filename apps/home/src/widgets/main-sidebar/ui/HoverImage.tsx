@@ -1,10 +1,16 @@
 import Image from 'next/image';
 import s from './hover-image.module.css';
 
-export function HoverImage({src, srcHover}: {src: string, srcHover: string}) {
+export function HoverImage({
+  src,
+  srcHover,
+}: {
+  src: string;
+  srcHover: string;
+}) {
   return (
     <div
-      className={`group relative select-none ${s.bouncyHover} shrink-0 size-20`}
+      className={`group relative select-none ${s.bouncyHover} size-20 shrink-0`}
     >
       <Image
         src={src}
@@ -19,7 +25,7 @@ export function HoverImage({src, srcHover}: {src: string, srcHover: string}) {
         width={72}
         height={72}
         priority
-        className="pointer-events-none absolute inset-0 z-10 object-contain opacity-0 [filter:blur(0px)] [transition:opacity_.35s_ease,filter_.35s_ease] group-hover:opacity-100 group-hover:[filter:blur(0px)] group-hover:duration-200 group-hover:ease-out group-hover:will-change-[opacity,filter] group-active:opacity-100 group-active:[filter:blur(0px)] group-active:duration-200 group-active:ease-out"
+        className="filter:blur(0px) group-hover:filter:blur(0px) group-active:filter:blur(0px) pointer-events-none absolute inset-0 z-10 object-contain opacity-0 [transition:opacity_.35s_ease,filter_.35s_ease] group-hover:opacity-100 group-hover:duration-200 group-hover:ease-out group-hover:will-change-[opacity,filter] group-active:opacity-100 group-active:duration-200 group-active:ease-out"
       />
     </div>
   );

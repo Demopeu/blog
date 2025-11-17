@@ -10,7 +10,7 @@ export function UseStackLogoLoop({
   }[];
 }) {
   return (
-    <div className="w-72 sm:w-80 md:w-128 lg:w-160">
+    <div className="md:w-lg lg:w-160 w-72 sm:w-80">
       <LogoLoop
         logos={techLogos}
         speed={30}

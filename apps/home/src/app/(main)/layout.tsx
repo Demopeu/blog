@@ -1,6 +1,6 @@
 import { MainHeader } from '@/widgets/main-header';
 import { Particles } from '@/shared/motion';
-import { SidebarProvider } from '@/shared/ui/shadcn';
+import { SidebarProvider } from '@repo/ui/components/sidebar';
 import { MainSidebar } from '@/widgets/main-sidebar';
 import { MainFooter } from '@/widgets/main-footer';
 

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import clsx from 'clsx';
+import { cn } from '@repo/ui/lib/utils';
 import { NavBarProps } from '../consts/nav-config';
 import { iconMap } from '../lib/IconMap';
 
@@ -21,7 +21,7 @@ export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
             key={href}
             href={href}
             aria-label={`Go to ${label.toLowerCase()}`}
-            className={clsx(
+            className={cn(
               'group flex w-full items-center px-2 py-2',
               'transition-colors',
               isActive

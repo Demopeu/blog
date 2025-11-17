@@ -1,4 +1,4 @@
-import { cn } from '@/shared/lib/utils';
+import { cn } from '@repo/ui/lib/utils';
 
 export function SectionWrapper({
   children,

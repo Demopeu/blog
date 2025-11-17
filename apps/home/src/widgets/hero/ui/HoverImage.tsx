@@ -10,7 +10,7 @@ export function HoverImage({
 }) {
   return (
     <div
-      className={`group relative hidden select-none xl:block xl:size-80 2xl:size-96 2xl:scale-130 ${s.bouncyHover}`}
+      className={`2xl:scale-130 group relative hidden select-none xl:block xl:size-80 2xl:size-96 ${s.bouncyHover}`}
     >
       <Image
         src={src}
@@ -25,7 +25,7 @@ export function HoverImage({
         width={600}
         height={600}
         priority
-        className="pointer-events-none absolute inset-0 z-10 object-contain opacity-0 [filter:blur(0px)] [transition:opacity_.35s_ease,filter_.35s_ease] group-hover:opacity-100 group-hover:[filter:blur(0px)] group-hover:duration-200 group-hover:ease-out group-hover:will-change-[opacity,filter]"
+        className="filter:blur(0px) group-hover:filter:blur(0px) pointer-events-none absolute inset-0 z-10 object-contain opacity-0 [transition:opacity_.35s_ease,filter_.35s_ease] group-hover:opacity-100 group-hover:duration-200 group-hover:ease-out group-hover:will-change-[opacity,filter]"
       />
     </div>
   );
