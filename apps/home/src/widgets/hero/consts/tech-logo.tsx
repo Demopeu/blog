@@ -1,4 +1,13 @@
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiPrettier, SiPnpm } from 'react-icons/si';
+import {
+  SiReact,
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiPrettier,
+  SiPnpm,
+  SiTurborepo,
+  SiShadcnui,
+} from 'react-icons/si';
 import Image from 'next/image';
 
 export type TechLogo = {
@@ -22,6 +31,8 @@ export const techLogos: TechLogo[] = [
   },
   { node: <SiPrettier />, title: 'Prettier', href: 'https://prettier.io' },
   { node: <SiPnpm />, title: 'pnpm', href: 'https://pnpm.io' },
+  { node: <SiTurborepo />, title: 'Turborepo', href: 'https://turborepo.org' },
+  { node: <SiShadcnui />, title: 'Shadcn UI', href: 'https://ui.shadcn.com' },
   {
     node: (
       <Image
@@ -50,7 +61,7 @@ export const techLogos: TechLogo[] = [
   },
   {
     node: (
-      <div className="flex h-15 items-center justify-center">
+      <div className="h-15 flex items-center justify-center">
         <Image
           src="/logo/fsd-logo.png"
           alt="feature-sliced design"

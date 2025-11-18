@@ -2,6 +2,7 @@
 @import 'tw-animate-css';
 @import '@repo/tailwind-config';
 
+@import './source.css';
 @import './variants.css';
 @import './theme.css';
 @import './tokens.light.css';
