@@ -8,7 +8,7 @@ import { ThemeToggle } from '@/features/theme-toggle';
 
 export function MainSidebar() {
   return (
-    <Sidebar side="right" className="border-none shadow-none outline-none">
+    <Sidebar side="right" className="border-none shadow-none outline-none bg-sidebar [&>button]:hidden">
       <div className="mr-1 mt-4 flex items-center justify-end">
         <ThemeToggle className="size-7 bg-transparent" />
         <SideBarToggle />
