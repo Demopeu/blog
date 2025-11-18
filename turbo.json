@@ -1,7 +1,6 @@
 {
   "$schema": "https://turborepo.com/schema.json",
   "ui": "tui",
-  "globalEnv": ["NEXT_PUBLIC_BLOG_URL","NEXT_PUBLIC_HOME_URL"],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
