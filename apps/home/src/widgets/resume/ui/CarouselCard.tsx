@@ -2,7 +2,7 @@
 
 import { CarouselItem } from '../consts/portfolio';
 import { Github } from '@/shared/icon';
-import { useFlag } from '@/shared/hooks/use-flag';
+import { useFlag } from '@/shared/hooks';
 import Link from 'next/link';
 import { cn } from '@repo/ui/lib/utils';
 import Image from 'next/image';
