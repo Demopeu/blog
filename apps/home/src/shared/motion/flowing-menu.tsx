@@ -143,13 +143,13 @@ const MenuItem: React.FC<MenuItemProps> = ({
       <React.Fragment key={loopIdx}>
         {entries.map((e, idx) => (
           <React.Fragment key={`${loopIdx}-${idx}`}>
-            <div className="flex items-center gap-[2vw]">
-              <span className="text-background ml-[2vw] text-center text-4xl leading-none font-black uppercase md:text-5xl">
-                {e.text}
-              </span>
+            <div className="flex items-center">
               <div className="w-20">
                 <Image src={e.image} alt={e.text} width={200} height={200} />
               </div>
+              <span className="text-background mr-[3vw] text-center text-4xl font-black uppercase leading-none md:text-5xl">
+                {e.text}
+              </span>
             </div>
           </React.Fragment>
         ))}
@@ -177,7 +177,7 @@ const MenuItem: React.FC<MenuItemProps> = ({
         </span>
       )}
       <div
-        className="bg-foreground pointer-events-none absolute top-0 left-0 h-full w-full translate-y-[101%] overflow-hidden"
+        className="bg-foreground pointer-events-none absolute left-0 top-0 h-full w-full translate-y-[101%] overflow-hidden"
         ref={marqueeRef}
       >
         <div className="flex h-full w-[200%]" ref={marqueeInnerRef}>
