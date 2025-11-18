@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import '@repo/tailwind-config';
+
+@import './variants.css';
+@import './theme.css';
+@import './tokens.light.css';
+@import './tokens.dark.css';
+@import './layer.base.css';
+@import './utilites.css';
+@import './media.css';
