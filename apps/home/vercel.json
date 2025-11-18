@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/blog/:path*",
-      "destination": "https://blog-blog-theta.vercel.app/:path*"
+      "destination": "https://blog-blog-theta.vercel.app/blog/:path*"
     }
   ]
 }
