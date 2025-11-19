@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
         source: '/',
         destination: '/blog',
         permanent: false,
+        basePath: false,
       },
     ];
   },
