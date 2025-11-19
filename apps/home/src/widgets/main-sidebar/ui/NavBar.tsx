@@ -11,7 +11,7 @@ export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
 
   return (
     <nav className="space-y-2 border-b-2 pb-8 text-3xl font-bold">
-      {navItems.map(({ href, label }) => {
+      {navItems.map(({ href, label, prefetch }) => {
         const isActive = pathname === href;
         const key = label.toLowerCase() as keyof typeof iconMap;
         const Icon = iconMap[key];
@@ -21,6 +21,7 @@ export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
             key={href}
             href={href}
             aria-label={`Go to ${label.toLowerCase()}`}
+            prefetch={prefetch}
             className={cn(
               'group flex w-full items-center px-2 py-2',
               'transition-colors',
