@@ -10,7 +10,7 @@ export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
 
   return (
     <nav className="flex flex-nowrap items-center gap-3 whitespace-nowrap text-[clamp(1rem,0.6rem+1.2vw,1.25rem)] font-semibold sm:gap-5 lg:gap-6">
-      {navItems.map(({ href, label }) => {
+      {navItems.map(({ href, label, prefetch }) => {
         const isActive = pathname === href;
 
         return (
@@ -18,6 +18,7 @@ export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
             key={href}
             href={href}
             aria-label={`Go to ${label.toLowerCase()}`}
+            prefetch={prefetch}
             className={cn(
               'group -mx-1 inline-flex items-center px-2 py-1.5',
               'transition-colors',
