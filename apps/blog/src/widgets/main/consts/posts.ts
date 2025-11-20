@@ -4,7 +4,7 @@ export type MainSliderProps = {
   Category: string;
   Tag: string[];
   src: string;
-  id: number;
+  slug: string;
 };
 
 export const dummyMainSlider: MainSliderProps[] = [
@@ -15,7 +15,7 @@ export const dummyMainSlider: MainSliderProps[] = [
     Category: 'Tech',
     Tag: ['embla', 'library'],
     src: '/blog/posts/PROGRAMMERS.png',
-    id: 1,
+    slug: 'embla-library를 사용해보자',
   },
   {
     title: '브라우저 인터페이스',
@@ -24,7 +24,7 @@ export const dummyMainSlider: MainSliderProps[] = [
     Category: 'CS',
     Tag: ['브라우저 인터페이스'],
     src: '/blog/posts/BAEKJOON.png',
-    id: 2,
+    slug: '브라우저 인터페이스',
   },
   {
     title: '42627/디스크 컨트롤러/javascript',
@@ -33,7 +33,7 @@ export const dummyMainSlider: MainSliderProps[] = [
     Category: '문제풀이',
     Tag: ['Algorithm', 'Programmers', 'javascript', 'heap'],
     src: '/blog/posts/PROGRAMMERS.png',
-    id: 3,
+    slug: '42627',
   },
   {
     title: 'Turbo repo 설정 1',
@@ -42,6 +42,6 @@ export const dummyMainSlider: MainSliderProps[] = [
     Category: 'Development',
     Tag: ['Turbo repo', '설정'],
     src: '/blog/posts/BAEKJOON.png',
-    id: 4,
+    slug: 'Turbo repo 설정 1',
   },
 ];

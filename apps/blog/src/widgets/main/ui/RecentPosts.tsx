@@ -63,7 +63,7 @@ export function RecentPosts() {
             <div className="flex flex-col">
               {dummyMainSlider.map((item, index) => (
                 <Link
-                  href={`/blog/${item.id}`}
+                  href={`/blog/post/${item.slug}`}
                   key={index}
                   className={cn(
                     'h-25 flex shrink-0 cursor-pointer gap-3 p-4 [transition:all_0.5s_ease-in-out,border_0s]',

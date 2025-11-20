@@ -1,3 +1,9 @@
+import { SsgoiTransition } from '@ssgoi/react';
+
 export default function page() {
-  return <div>page</div>;
+  return (
+    <SsgoiTransition id="/dev">
+      <div>page</div>
+    </SsgoiTransition>
+  );
 }
