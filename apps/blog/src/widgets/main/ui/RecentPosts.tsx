@@ -24,7 +24,7 @@ export function RecentPosts() {
       <div className="h-100 flex gap-6 md:gap-12">
         <article
           key={selectedIndex}
-          className="animate-fade-in flex flex-col gap-4 sm:w-3/5"
+          className="animate-fade-in flex flex-col gap-4 md:w-3/5"
         >
           <div className="border-1 border-primary/10 relative aspect-video w-full overflow-hidden rounded-2xl">
             <Image
@@ -81,7 +81,7 @@ export function RecentPosts() {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
-                  <div className="flex flex-1 flex-col justify-center">
+                  <div className="flex min-w-0 flex-1 flex-col justify-center">
                     <h3 className="truncate text-sm font-semibold">
                       {item.title}
                     </h3>
