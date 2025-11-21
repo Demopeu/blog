@@ -1,3 +1,5 @@
 export { Banner } from './ui/Banner';
-export { RecentPosts } from './ui/RecentPosts';
+export { FetchRecentPosts } from './ui/FetchRecentPosts';
+export { FetchTagCloud } from './ui/FetchTagCloud';
 export { PostsNav } from './ui/PostsNav';
+export { TagCloud } from './ui/TagCloud';

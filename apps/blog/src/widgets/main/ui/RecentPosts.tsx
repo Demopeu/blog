@@ -3,20 +3,20 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { dummyMainSlider } from '../consts/posts';
 import { cn } from '@repo/ui/lib/utils';
+import { RecentPost } from '@/entities/post/api/getRecentPost';
 
-export function RecentPosts() {
+export function RecentPosts({ posts }: { posts: RecentPost[] }) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
-      setSelectedIndex((prev) => (prev + 1) % dummyMainSlider.length);
+      setSelectedIndex((prev) => (prev + 1) % posts.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [posts.length]);
 
-  const currentItem = dummyMainSlider[selectedIndex]!;
+  const currentItem = posts[selectedIndex]!;
 
   return (
     <section>
@@ -38,9 +38,9 @@ export function RecentPosts() {
           <aside className="space-y-2">
             <div className="flex flex-wrap gap-2">
               <span className="bg-highlight text-primary rounded-full px-3 py-1 text-sm font-medium">
-                {currentItem.Category}
+                {currentItem.category}
               </span>
-              {currentItem.Tag.map((tag) => (
+              {currentItem.tags.map((tag) => (
                 <span
                   key={tag}
                   className="bg-primary/10 text-primary rounded-full px-3 py-1 text-sm"
@@ -61,7 +61,7 @@ export function RecentPosts() {
         <article className="hidden w-2/5 sm:flex sm:flex-col">
           <div className="h-100 overflow-hidden">
             <div className="flex flex-col">
-              {dummyMainSlider.map((item, index) => (
+              {posts.map((item, index) => (
                 <Link
                   href={`/blog/post/${item.slug}`}
                   key={index}

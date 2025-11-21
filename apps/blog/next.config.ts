@@ -4,6 +4,17 @@ const nextConfig: NextConfig = {
   reactCompiler: true,
   transpilePackages: ['@repo/ui'],
   basePath: '/blog',
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+        port: '',
+        pathname: '/**',
+        search: '',
+      },
+    ],
+  },
   async redirects() {
     return [
       {

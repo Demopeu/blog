@@ -1,9 +1,13 @@
 import { SsgoiTransition } from '@ssgoi/react';
+import { Posts } from '@/widgets/main/ui/Posts';
+import { getPosts } from '@/entities/post';
 
-export default function Page() {
+export default async function Page() {
+  const posts = await getPosts();
+
   return (
     <SsgoiTransition id="/">
-      <div>main</div>
+      <Posts posts={posts} />
     </SsgoiTransition>
   );
 }

@@ -5,12 +5,12 @@ export type Post = {
   category: string;
   slug: string;
   title: string;
-  description: string | null;
-  tags: string[] | null;
-  src: string | null;
+  description: string;
+  tags: string[];
+  src: string;
   content_md: string;
   status: string;
-  published_at: string | null;
+  published_at: string;
 };
 
 export async function getPosts(category?: string): Promise<Post[]> {

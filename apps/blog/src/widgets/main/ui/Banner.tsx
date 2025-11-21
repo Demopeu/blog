@@ -11,7 +11,6 @@ export function Banner() {
         height={1800}
         className="h-full w-full rounded-none object-cover object-center md:rounded-2xl"
         sizes="100vw"
-        unoptimized
       />
     </section>
   );
