@@ -1,7 +1,6 @@
-export default function Loading() {
+export function PostsSkeleton() {
   return (
-    <div className="space-y-6">
-      <div className="bg-muted h-8 w-32 animate-pulse rounded" />
+    <div className="mt-10 space-y-6">
       {[1, 2, 3].map((i) => (
         <div key={i} className="flex gap-6 p-4">
           <div className="bg-muted h-48 w-60 shrink-0 animate-pulse rounded-2xl" />
