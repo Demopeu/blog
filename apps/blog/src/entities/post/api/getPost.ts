@@ -1,34 +1,30 @@
 import { supabaseServer } from '@/shared/lib/create-client';
+import type { Post } from '../model/types';
 
-export type Post = {
-  id: number;
-  category: string;
-  slug: string;
-  title: string;
-  description: string;
-  tags: string[];
-  src: string;
-  content_md: string;
-  status: string;
-  published_at: string;
-};
-
-export async function getPosts(category?: string): Promise<Post[]> {
-  let query = supabaseServer
+export async function getPost(category: string, slug: string): Promise<Post> {
+  const { data, error } = await supabaseServer
     .from('posts')
     .select('*')
     .eq('status', 'published')
-    .order('published_at', { ascending: false });
-
-  if (category) {
-    query = query.eq('category', category);
-  }
-
-  const { data, error } = await query;
+    .eq('category', category)
+    .eq('slug', slug)
+    .maybeSingle();
 
   if (error) {
     throw error;
   }
 
-  return (data ?? []) as Post[];
+  if (!data) {
+    throw new Error('POST_NOT_FOUND');
+  }
+
+  const post = {
+    ...data,
+    description: data.description ?? '',
+    tags: data.tags ?? [],
+    src: data.src ?? '',
+    published_at: data.published_at ?? '',
+  };
+
+  return post as Post;
 }
