@@ -2,6 +2,10 @@ import type { Metadata } from 'next';
 import { Poppins, Noto_Sans_KR } from 'next/font/google';
 import './styles/base.css';
 import { Providers } from './provider/providers';
+import { SidebarProvider } from '@repo/ui/components/sidebar';
+import { MainHeader } from '@/widgets/main-header';
+import { MainSidebar } from '@/widgets/main-sidebar';
+import { MainFooter } from '@/widgets/main-footer';
 
 const notoSansKr = Noto_Sans_KR({
   variable: '--font-noto-sans-kr',
@@ -30,7 +34,14 @@ export default function RootLayout({
       <body
         className={`${notoSansKr.className} ${notoSansKr.variable} ${poppins.variable} antialiased`}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          <SidebarProvider defaultOpen={false} className="flex-col">
+            <MainHeader />
+            <MainSidebar />
+            {children}
+            <MainFooter />
+          </SidebarProvider>
+        </Providers>
       </body>
     </html>
   );

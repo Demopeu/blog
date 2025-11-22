@@ -1,17 +1,12 @@
-'use client';
-
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { cn } from '@repo/ui/lib/utils';
 import { NavBarProps } from '../consts/nav';
 
 export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
-  const pathname = usePathname();
-
   return (
     <nav className="flex flex-nowrap items-center gap-3 whitespace-nowrap text-[clamp(1rem,0.6rem+1.2vw,1.25rem)] font-semibold sm:gap-5 lg:gap-6">
       {navItems.map(({ href, label, prefetch }) => {
-        const isActive = pathname === href;
+        const isActive = label === 'Blog';
 
         return (
           <Link
