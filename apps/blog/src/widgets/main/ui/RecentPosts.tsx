@@ -22,7 +22,8 @@ export function RecentPosts({ posts }: { posts: RecentPost[] }) {
     <section>
       <h1 className="mb-5 text-pretty text-2xl font-bold">최근 게시글</h1>
       <div className="h-100 flex gap-6 md:gap-12">
-        <article
+        <Link
+          href={`/post/${currentItem.category}/${currentItem.slug}`}
           key={selectedIndex}
           className="animate-fade-in flex flex-col gap-4 md:w-3/5"
         >
@@ -56,14 +57,14 @@ export function RecentPosts({ posts }: { posts: RecentPost[] }) {
               {currentItem.description}
             </p>
           </aside>
-        </article>
+        </Link>
 
         <article className="hidden w-2/5 sm:flex sm:flex-col">
           <div className="h-100 overflow-hidden">
             <div className="flex flex-col">
               {posts.map((item, index) => (
                 <Link
-                  href={`/blog/post/${item.slug}`}
+                  href={`/post/${item.category}/${item.slug}`}
                   key={index}
                   className={cn(
                     'h-25 flex shrink-0 cursor-pointer gap-3 p-4 [transition:all_0.5s_ease-in-out,border_0s]',
