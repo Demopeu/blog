@@ -27,7 +27,7 @@ export default async function PostPage({ params }: PageProps) {
   const contentHtml = await renderMarkdown(post.content_md);
 
   return (
-    <MainWrapper>
+    <MainWrapper className="mb-bmt">
       <article className="mx-auto max-w-4xl space-y-8 py-8">
         {/* 배너 이미지 */}
         <div className="relative aspect-[21/9] w-full overflow-hidden rounded-2xl">
@@ -41,7 +41,7 @@ export default async function PostPage({ params }: PageProps) {
         </div>
 
         {/* 타이틀 */}
-        <h1 className="text-4xl font-bold">{post.title}</h1>
+        <h1 className="text-5xl font-bold">{post.title}</h1>
 
         {/* 카테고리 & 태그 */}
         <div className="flex flex-wrap gap-2">

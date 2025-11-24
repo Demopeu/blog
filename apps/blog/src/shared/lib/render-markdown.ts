@@ -1,9 +1,14 @@
 import { remark } from 'remark';
-import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
+import remarkRehype from 'remark-rehype';
+import rehypeStringify from 'rehype-stringify';
 
 export async function renderMarkdown(markdown: string): Promise<string> {
-  const processed = await remark().use(remarkGfm).use(html).process(markdown);
+  const processed = await remark()
+    .use(remarkGfm)
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypeStringify, { allowDangerousHtml: true })
+    .process(markdown);
 
   return processed.toString();
 }
