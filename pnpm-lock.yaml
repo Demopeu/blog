@@ -90,9 +90,6 @@ importers:
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
-      '@tailwindcss/typography':
-        specifier: 0.5.19
-        version: 0.5.19(tailwindcss@4.1.5)
       '@types/node':
         specifier: ^24
         version: 24.10.1
@@ -4060,11 +4057,6 @@ snapshots:
     dependencies:
       postcss-selector-parser: 6.0.10
       tailwindcss: 4.1.17
-
-  '@tailwindcss/typography@0.5.19(tailwindcss@4.1.5)':
-    dependencies:
-      postcss-selector-parser: 6.0.10
-      tailwindcss: 4.1.5
 
   '@types/conventional-commits-parser@5.0.2':
     dependencies:
