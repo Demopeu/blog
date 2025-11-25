@@ -1,5 +1,5 @@
 import type { NextRequest } from 'next/server';
-import { handleBlogProxy } from './src/shared/lib/blog-proxy';
+import { handleBlogProxy } from './shared/lib/blog-proxy';
 
 export const config = {
   matcher: ['/blog', '/blog/:path*'],
