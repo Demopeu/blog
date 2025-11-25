@@ -2,8 +2,12 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
-      "source": "/blog/:path(.*)",
-      "destination": "https://blog-blog-theta.vercel.app/blog/:path"
+      "source": "/blog",
+      "destination": "https://blog-blog-theta.vercel.app"
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "https://blog-blog-theta.vercel.app/:path*"
     }
   ]
 }
