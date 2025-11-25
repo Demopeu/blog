@@ -65,24 +65,6 @@ GET https://demopeu.vercel.app/blog/post/dev/next16-blog-setup-2?_rsc=1r34m 404 
 
 ## 🔨 해결 방법
 
-1. basePath 제거와 vercel.json 복구
-
-```json
-// apps/home/vercel.json
-{
-  "rewrites": [
-    {
-      "source": "/blog",
-      "destination": "https://blog-blog-theta.vercel.app"
-    },
-    {
-      "source": "/blog/:path*",
-      "destination": "https://blog-blog-theta.vercel.app/:path*"
-    }
-  ]
-}
-```
-
 ## 📝 고려한 대안
 
 ## 📚 참고자료
