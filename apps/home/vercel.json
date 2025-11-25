@@ -3,11 +3,11 @@
   "rewrites": [
     {
       "source": "/blog",
-      "destination": "https://blog-blog-theta.vercel.app"
+      "destination": "https://blog-blog-theta.vercel.app/blog"
     },
     {
       "source": "/blog/:path*",
-      "destination": "https://blog-blog-theta.vercel.app/:path*"
+      "destination": "https://blog-blog-theta.vercel.app/blog/:path*"
     }
   ]
 }
