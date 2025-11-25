@@ -3,6 +3,7 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   reactCompiler: true,
   transpilePackages: ['@repo/ui'],
+  basePath: '/blog',
   images: {
     remotePatterns: [
       {
@@ -20,6 +21,16 @@ const nextConfig: NextConfig = {
         search: '',
       },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/blog',
+        permanent: false,
+        basePath: false,
+      },
+    ];
   },
 };
 
