@@ -6,7 +6,7 @@ export default async function Page() {
   const posts = await getPosts();
 
   return (
-    <SsgoiTransition id="/">
+    <SsgoiTransition id="/blog">
       <Posts posts={posts} />
     </SsgoiTransition>
   );

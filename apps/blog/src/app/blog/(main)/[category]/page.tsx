@@ -20,7 +20,7 @@ export default async function Page({
   const posts = await getPosts(category);
 
   return (
-    <SsgoiTransition id={`/${category}`}>
+    <SsgoiTransition id={`/blog/${category}`}>
       <Posts posts={posts} />
     </SsgoiTransition>
   );

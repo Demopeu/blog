@@ -33,8 +33,8 @@ importers:
   apps/blog:
     dependencies:
       '@ssgoi/react':
-        specifier: 2.3.0
-        version: 2.3.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: 2.5.2
+        version: 2.5.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@supabase/supabase-js':
         specifier: ^2.84.0
         version: 2.84.0
@@ -1128,8 +1128,19 @@ packages:
     resolution: {integrity: sha512-wj20Vo3ZKIHYSsPQolCp/haNq/Ah3Rt9i0gxOA3q9r6z5gvqy0TA+fexooljW4bVOETANJLmJuElop5cSuKVag==}
     engines: {node: '>=18.0.0'}
 
+  '@ssgoi/core@2.5.2':
+    resolution: {integrity: sha512-kBklaV4KYROqr9L/+oMIn1fr0UkH6eK0NWxtz78uwxbzwzUSJe2+dIsWsV/XYAOHsRno+sQPswwLcTFZXlIpbg==}
+    engines: {node: '>=18.0.0'}
+
   '@ssgoi/react@2.3.0':
     resolution: {integrity: sha512-Y67XsktI9zeuVhXx1VhQrqBLcqY4AStz957prZCZIVXP8qQDerBYDX/TuUMUqFD6RRSFckiS0N2KYdnSQSCm6Q==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      react: ^19.0.0
+      react-dom: ^19.0.0
+
+  '@ssgoi/react@2.5.2':
+    resolution: {integrity: sha512-WYkRyAAsEK2zxgEefL2sgJm7pDMi8lfFV6bvYjUQozQrQCKQBCyuj1rEqR8PjicUlA06cwj02bPUFnYrTV6GGQ==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^19.0.0
@@ -4023,9 +4034,17 @@ snapshots:
     dependencies:
       popmotion: 11.0.5
 
+  '@ssgoi/core@2.5.2': {}
+
   '@ssgoi/react@2.3.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@ssgoi/core': 2.4.0
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+
+  '@ssgoi/react@2.5.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+    dependencies:
+      '@ssgoi/core': 2.5.2
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
 

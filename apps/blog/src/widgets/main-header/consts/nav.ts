@@ -5,12 +5,10 @@ export type NavBarProps = {
   external?: boolean;
 };
 
-const HOME_URL = process.env.NEXT_PUBLIC_HOME_URL!;
-
 export const CrossZoneNavItems: NavBarProps[] = [
-  { href: `${HOME_URL}`, label: 'Home', prefetch: true, external: false },
+  { href: '/', label: 'Home', prefetch: true, external: false },
   {
-    href: `${HOME_URL}/resume`,
+    href: '/resume',
     label: 'Resume',
     prefetch: true,
     external: false,
