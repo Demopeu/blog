@@ -15,5 +15,5 @@ export const navItems: NavBarProps[] = [
     prefetch: false,
     external: true,
   },
-  { href: '/', label: 'Blog', prefetch: true },
+  { href: '/blog', label: 'Blog', prefetch: true },
 ];

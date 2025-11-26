@@ -4,6 +4,6 @@ type BannerProps = {
 };
 
 export const banner: BannerProps = {
-  src: '/blog/banner.png',
+  src: '/banner.png',
   alt: 'Banner',
 };

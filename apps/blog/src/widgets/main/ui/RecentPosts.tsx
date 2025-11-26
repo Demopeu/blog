@@ -23,7 +23,7 @@ export function RecentPosts({ posts }: { posts: RecentPost[] }) {
       <h1 className="mb-5 text-pretty text-2xl font-bold">최근 게시글</h1>
       <div className="h-100 flex gap-6 md:gap-12">
         <Link
-          href={`/post/${currentItem.category}/${currentItem.slug}`}
+          href={`/blog/post/${currentItem.category}/${currentItem.slug}`}
           key={selectedIndex}
           className="animate-fade-in flex flex-col gap-4 md:w-3/5"
           prefetch={false}
@@ -65,7 +65,7 @@ export function RecentPosts({ posts }: { posts: RecentPost[] }) {
             <div className="flex flex-col">
               {posts.map((item, index) => (
                 <Link
-                  href={`/post/${item.category}/${item.slug}`}
+                  href={`/blog/post/${item.category}/${item.slug}`}
                   key={index}
                   prefetch={false}
                   className={cn(

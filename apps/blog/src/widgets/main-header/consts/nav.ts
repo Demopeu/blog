@@ -8,12 +8,12 @@ export type NavBarProps = {
 const HOME_URL = process.env.NEXT_PUBLIC_HOME_URL!;
 
 export const navItems: NavBarProps[] = [
-  { href: `${HOME_URL}`, label: 'Home', prefetch: false, external: true },
+  { href: `${HOME_URL}`, label: 'Home', prefetch: true, external: false },
   {
     href: `${HOME_URL}/resume`,
     label: 'Resume',
-    prefetch: false,
-    external: true,
+    prefetch: true,
+    external: false,
   },
-  { href: '/', label: 'Blog', prefetch: true },
+  { href: '/blog', label: 'Blog', prefetch: false },
 ];

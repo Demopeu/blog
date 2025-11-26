@@ -1,5 +1,5 @@
 {
-  "name": "home",
+  "name": "blog-home",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
   "dependencies": {
     "@gsap/react": "2.1.2",
     "@ssgoi/react": "2.3.0",
+    "@vercel/microfrontends": "2.2.0",
     "embla-carousel-autoplay": "8.6.0",
     "embla-carousel-react": "8.6.0",
     "gl-matrix": "3.4.4",

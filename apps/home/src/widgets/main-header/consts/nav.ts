@@ -7,5 +7,5 @@ export type NavBarProps = {
 export const navItems: NavBarProps[] = [
   { href: '/', label: 'Home', prefetch: true },
   { href: '/resume', label: 'Resume', prefetch: true },
-  { href: '/blog', label: 'Blog', prefetch: false },
+  { href: '/blog', label: 'Blog', prefetch: true },
 ];

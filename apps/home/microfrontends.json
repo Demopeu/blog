@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/microfrontends.json",
+  "applications": {
+    "blog-home": {
+      "development": {
+        "task": "dev",
+        "local": 3000,
+        "fallback": "https://demopeu.vercel.app"
+      }
+    },
+    "blog-blog": {
+      "routing": [{ "paths": ["/blog", "/blog/:path*"] }],
+      "development": {
+        "task": "dev",
+        "local": 3001
+      }
+    }
+  }
+}
