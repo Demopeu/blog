@@ -7,7 +7,7 @@ export type NavBarProps = {
 
 const HOME_URL = process.env.NEXT_PUBLIC_HOME_URL!;
 
-export const navItems: NavBarProps[] = [
+export const CrossZoneNavItems: NavBarProps[] = [
   { href: `${HOME_URL}`, label: 'Home', prefetch: true, external: false },
   {
     href: `${HOME_URL}/resume`,
@@ -15,5 +15,8 @@ export const navItems: NavBarProps[] = [
     prefetch: true,
     external: false,
   },
-  { href: '/blog', label: 'Blog', prefetch: false },
+];
+
+export const LocalNavItems: NavBarProps[] = [
+  { href: '/blog', label: 'Blog', prefetch: true },
 ];

@@ -6,6 +6,7 @@ import { SidebarProvider } from '@repo/ui/components/sidebar';
 import { MainHeader } from '@/widgets/main-header';
 import { MainSidebar } from '@/widgets/main-sidebar';
 import { MainFooter } from '@/widgets/main-footer';
+import { PrefetchCrossZoneLinks } from '@vercel/microfrontends/next/client';
 
 const notoSansKr = Noto_Sans_KR({
   variable: '--font-noto-sans-kr',
@@ -42,6 +43,7 @@ export default function RootLayout({
             <MainFooter />
           </SidebarProvider>
         </Providers>
+        <PrefetchCrossZoneLinks />
       </body>
     </html>
   );

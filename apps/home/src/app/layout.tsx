@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Poppins, Noto_Sans_KR } from 'next/font/google';
 import './styles/base.css';
 import { Providers } from './provider/providers';
+import { PrefetchCrossZoneLinks } from '@vercel/microfrontends/next/client';
 
 const notoSansKr = Noto_Sans_KR({
   variable: '--font-noto-sans-kr',
@@ -71,6 +72,7 @@ export default function RootLayout({
         className={`${notoSansKr.className} ${notoSansKr.variable} ${poppins.variable} antialiased`}
       >
         <Providers>{children}</Providers>
+        <PrefetchCrossZoneLinks />
       </body>
     </html>
   );

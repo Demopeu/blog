@@ -2,7 +2,7 @@
 
 import { use, useMemo } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { Link } from '@vercel/microfrontends/next/client';
 import { Post } from '@/entities/post';
 import { TagFilterContext } from '@/entities/post';
 
@@ -35,7 +35,6 @@ export function Posts({ posts }: { posts: Post[] }) {
             key={post.id}
             href={`/post/${post.category}/${post.slug}`}
             className="hover:bg-muted/50 -mx-4 flex flex-col gap-6 rounded-2xl p-4 transition-all sm:flex-row"
-            prefetch={false}
           >
             <div className="relative h-48 w-60 shrink-0 overflow-hidden rounded-2xl">
               <Image

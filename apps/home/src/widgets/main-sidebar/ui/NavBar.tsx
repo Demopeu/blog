@@ -1,16 +1,31 @@
 'use client';
 
-import Link from 'next/link';
+import NextLink from 'next/link';
+import { Link as MicroLink } from '@vercel/microfrontends/next/client';
 import { usePathname } from 'next/navigation';
 import { cn } from '@repo/ui/lib/utils';
 import { NavBarProps } from '../consts/nav-config';
 import { iconMap } from '../lib/IconMap';
 
-export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
+export function NavBar({
+  navItems,
+  end = true,
+  local = true,
+}: {
+  navItems: NavBarProps[];
+  end?: boolean;
+  local?: boolean;
+}) {
   const pathname = usePathname();
+  const Link = local ? NextLink : MicroLink;
 
   return (
-    <nav className="space-y-2 border-b-2 pb-8 text-3xl font-bold">
+    <nav
+      className={cn(
+        'space-y-2 border-b-2 pb-8 text-3xl font-bold',
+        end && 'border-b-0 pb-2'
+      )}
+    >
       {navItems.map(({ href, label, prefetch }) => {
         const isActive = pathname === href;
         const key = label.toLowerCase() as keyof typeof iconMap;

@@ -2,10 +2,17 @@ import { SidebarGroup } from '@repo/ui/components';
 import { NavBar } from './NavBar';
 import { NavBarProps } from '../consts/nav-config';
 
-export function Group({ navItems }: { navItems: NavBarProps[] }) {
+export function Group({
+  localNavItems,
+  crossZoneNavItems,
+}: {
+  localNavItems: NavBarProps[];
+  crossZoneNavItems: NavBarProps[];
+}) {
   return (
     <SidebarGroup className="p-4">
-      <NavBar navItems={navItems} />
+      <NavBar navItems={localNavItems} local={true} />
+      <NavBar navItems={crossZoneNavItems} end={false} local={false} />
     </SidebarGroup>
   );
 }

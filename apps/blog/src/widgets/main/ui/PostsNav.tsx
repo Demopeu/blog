@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@vercel/microfrontends/next/client';
 import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -138,7 +138,6 @@ export function PostsNav() {
             return (
               <Link
                 key={category.href}
-                prefetch={false}
                 ref={(el) => {
                   itemsRef.current[index] = el;
                 }}
