@@ -67,6 +67,7 @@ export function RecentPosts({ posts }: { posts: RecentPost[] }) {
                 <Link
                   href={`/post/${item.category}/${item.slug}`}
                   key={index}
+                  prefetch={false}
                   className={cn(
                     'h-25 flex shrink-0 cursor-pointer gap-3 p-4 [transition:all_0.5s_ease-in-out,border_0s]',
                     index === selectedIndex
