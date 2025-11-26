@@ -18,5 +18,5 @@ export const CrossZoneNavItems: NavBarProps[] = [
 ];
 
 export const LocalNavItems: NavBarProps[] = [
-  { href: '/blog', label: 'Blog', prefetch: false },
+  { href: '/blog', label: 'Blog', prefetch: true },
 ];
