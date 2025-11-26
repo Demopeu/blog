@@ -1,4 +1,4 @@
 export const dummy = {
-  src: '/blog/dummy.png',
-  srcHover: '/blog/dummy2.png',
+  src: '/dummy.png',
+  srcHover: '/dummy2.png',
 };
