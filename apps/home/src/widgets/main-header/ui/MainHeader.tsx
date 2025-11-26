@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { LogoText } from '@/shared/ui/components';
-import { navItems } from '../consts/nav';
+import { LocalNavItems, CrossZoneNavItems } from '../consts/nav';
 import { HeaderActions } from './HeaderActions';
 
 export function MainHeader() {
@@ -9,7 +9,10 @@ export function MainHeader() {
       <Link href="/" aria-label="Go to home" className="shrink-0">
         <LogoText />
       </Link>
-      <HeaderActions navItems={navItems} />
+      <HeaderActions
+        LocalNavItems={LocalNavItems}
+        CrossZoneNavItems={CrossZoneNavItems}
+      />
     </header>
   );
 }

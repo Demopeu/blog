@@ -1,8 +1,17 @@
-import Link from 'next/link';
+import NextLink from 'next/link';
+import { Link as MicroLink } from '@vercel/microfrontends/next/client';
 import { cn } from '@repo/ui/lib/utils';
 import { NavBarProps } from '../consts/nav';
 
-export function NavBar({ navItems }: { navItems: NavBarProps[] }) {
+export function NavBar({
+  navItems,
+  local = true,
+}: {
+  navItems: NavBarProps[];
+  local?: boolean;
+}) {
+  const Link = local ? NextLink : MicroLink;
+
   return (
     <nav className="flex flex-nowrap items-center gap-3 whitespace-nowrap text-[clamp(1rem,0.6rem+1.2vw,1.25rem)] font-semibold sm:gap-5 lg:gap-6">
       {navItems.map(({ href, label, prefetch }) => {

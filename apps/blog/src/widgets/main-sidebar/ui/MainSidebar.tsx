@@ -3,7 +3,7 @@ import { Header } from './Header';
 import { SideBarToggle } from '@/features/sidebar-toggle';
 import { Footer } from './Footer';
 import { Group } from './Group';
-import { navItems } from '../consts/nav';
+import { LocalNavItems, CrossZoneNavItems } from '../consts/nav';
 import { ThemeToggle } from '@/features/theme-toggle';
 
 export function MainSidebar() {
@@ -17,7 +17,10 @@ export function MainSidebar() {
         <SideBarToggle />
       </div>
       <Header />
-      <Group navItems={navItems} />
+      <Group
+        localNavItems={LocalNavItems}
+        crossZoneNavItems={CrossZoneNavItems}
+      />
       <Footer />
     </Sidebar>
   );
