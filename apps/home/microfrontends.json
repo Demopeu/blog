@@ -9,7 +9,7 @@
       }
     },
     "blog-blog": {
-      "routing": [{ "paths": ["/blog/:path*"] }],
+      "routing": [{ "paths": ["/blog", "/blog/:path*"] }],
       "development": {
         "task": "dev",
         "local": 3001
