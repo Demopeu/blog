@@ -1,8 +1,6 @@
 import type { NextConfig } from 'next';
-import { withMicrofrontends } from '@vercel/microfrontends/next/config';
 
 const nextConfig: NextConfig = {
-  turbopack: {},
   reactCompiler: true,
   transpilePackages: ['@repo/ui'],
   images: {
@@ -23,6 +21,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  redirects: () => {
+    return [
+      {
+        source: '/',
+        destination: '/blog',
+        permanent: true,
+      },
+    ];
+  },
 };
 
-export default withMicrofrontends(nextConfig);
+export default nextConfig;

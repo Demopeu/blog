@@ -1,5 +1,5 @@
 {
-  "name": "blog-blog",
+  "name": "blog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,7 +13,6 @@
   "dependencies": {
     "@ssgoi/react": "2.3.0",
     "@supabase/supabase-js": "^2.84.0",
-    "@vercel/microfrontends": "^2.2.0",
     "embla-carousel-autoplay": "8.6.0",
     "embla-carousel-react": "8.6.0",
     "lucide-react": "0.546.0",

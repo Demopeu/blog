@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/blog",
+      "destination": "https://blog-blog-theta.vercel.app/blog"
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "https://blog-blog-theta.vercel.app/blog/:path*"
+    }
+  ]
+}
