@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/microfrontends.json",
+  "applications": {
+    "blog-home": {
+      "development": {
+        "fallback": "demopeu.vercel.app"
+      }
+    },
+    "blog-blog": {
+      "routing": [
+        {
+          "paths": ["/blog/:path*"]
+        }
+      ]
+    }
+  }
+}
