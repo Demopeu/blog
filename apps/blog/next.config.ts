@@ -22,13 +22,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  async redirects() {
+  redirects: () => {
     return [
       {
         source: '/',
         destination: '/blog',
-        permanent: false,
         basePath: false,
+        permanent: false,
       },
     ];
   },

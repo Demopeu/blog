@@ -138,6 +138,7 @@ export function PostsNav() {
             return (
               <Link
                 key={category.href}
+                prefetch={false}
                 ref={(el) => {
                   itemsRef.current[index] = el;
                 }}

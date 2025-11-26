@@ -9,6 +9,7 @@
     "test": "turbo test",
     "start": "turbo start",
     "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean",
     "check-before-commit": "pnpm lint && pnpm typecheck",
     "prepare": "husky install"
   },
