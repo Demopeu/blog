@@ -26,6 +26,7 @@ export function RecentPosts({ posts }: { posts: RecentPost[] }) {
           href={`/post/${currentItem.category}/${currentItem.slug}`}
           key={selectedIndex}
           className="animate-fade-in flex flex-col gap-4 md:w-3/5"
+          prefetch={false}
         >
           <div className="border-1 border-primary/10 relative aspect-video w-full overflow-hidden rounded-2xl">
             <Image

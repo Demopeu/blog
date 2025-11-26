@@ -3,6 +3,7 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   reactCompiler: true,
   transpilePackages: ['@repo/ui'],
+  basePath: '/blog',
   images: {
     remotePatterns: [
       {
@@ -26,7 +27,8 @@ const nextConfig: NextConfig = {
       {
         source: '/',
         destination: '/blog',
-        permanent: true,
+        basePath: false,
+        permanent: false,
       },
     ];
   },
