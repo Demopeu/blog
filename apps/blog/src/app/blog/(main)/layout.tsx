@@ -17,7 +17,12 @@ export default function layout({ children }: { children: React.ReactNode }) {
           <div className="flex gap-4">
             <div className="w-full md:w-2/3">
               <PostsNav />
-              {children}
+              <div
+                className="relative overflow-hidden"
+                style={{ isolation: 'isolate' }}
+              >
+                {children}
+              </div>
             </div>
             <div className="hidden md:block md:w-1/3">
               <FetchTagCloud />
