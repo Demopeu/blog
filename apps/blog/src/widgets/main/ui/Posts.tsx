@@ -28,45 +28,43 @@ export function Posts({ posts }: { posts: Post[] }) {
   }, [posts, selectedTags]);
 
   return (
-    <section className="space-y-6">
-      <div className="space-y-6">
-        {filteredPosts.map((post) => (
-          <Link
-            key={post.id}
-            href={`/blog/post/${post.category}/${post.slug}`}
-            className="hover:bg-muted/50 -mx-4 flex flex-col gap-6 rounded-2xl p-4 transition-all sm:flex-row"
-          >
-            <div className="relative h-48 w-60 shrink-0 overflow-hidden rounded-2xl">
-              <Image
-                src={post.src}
-                alt={post.title}
-                fill
-                className="object-cover object-left-top"
-                sizes="240px"
-              />
-            </div>
-            <div className="flex min-w-0 flex-1 flex-col justify-center space-y-2">
-              <span className="text-muted-foreground text-sm">
-                {post.category}
-              </span>
-              <h3 className="line-clamp-2 text-xl font-bold">{post.title}</h3>
-              <p className="text-muted-foreground line-clamp-2 text-sm">
-                {post.description}
-              </p>
-              <time className="text-muted-foreground text-sm">
-                {new Date(post.published_at)
-                  .toLocaleDateString('ko-KR', {
-                    year: 'numeric',
-                    month: '2-digit',
-                    day: '2-digit',
-                  })
-                  .replace(/\. /g, '.')
-                  .replace(/\.$/, '')}
-              </time>
-            </div>
-          </Link>
-        ))}
-      </div>
+    <section className="mt-10 space-y-6">
+      {filteredPosts.map((post) => (
+        <Link
+          key={post.id}
+          href={`/blog/post/${post.category}/${post.slug}`}
+          className="hover:bg-muted/50 -mx-4 flex flex-col gap-6 rounded-2xl p-4 transition-all sm:flex-row"
+        >
+          <div className="border-1 border-primary/10 relative aspect-video w-full overflow-hidden rounded-2xl sm:flex-1">
+            <Image
+              src={post.src}
+              alt={post.title}
+              fill
+              className="object-center"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          <div className="sm:flex-1/12 flex min-w-0 flex-1 flex-col justify-center space-y-2">
+            <span className="text-muted-foreground text-sm">
+              {post.category}
+            </span>
+            <h3 className="line-clamp-2 text-xl font-bold">{post.title}</h3>
+            <p className="text-muted-foreground line-clamp-2 text-sm">
+              {post.description}
+            </p>
+            <time className="text-muted-foreground text-sm">
+              {new Date(post.published_at)
+                .toLocaleDateString('ko-KR', {
+                  year: 'numeric',
+                  month: '2-digit',
+                  day: '2-digit',
+                })
+                .replace(/\. /g, '.')
+                .replace(/\.$/, '')}
+            </time>
+          </div>
+        </Link>
+      ))}
     </section>
   );
 }

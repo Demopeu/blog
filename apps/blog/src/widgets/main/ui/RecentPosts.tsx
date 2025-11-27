@@ -32,7 +32,7 @@ export function RecentPosts({ posts }: { posts: RecentPost[] }) {
               src={currentItem.src}
               alt={currentItem.title}
               fill
-              className="object-cover"
+              className="object-center"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
