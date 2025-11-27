@@ -9,6 +9,7 @@ export const categories: CategoryProp[] = [
   { name: 'TS', href: '/blog/typescript', slug: 'typescript' },
   { name: 'React', href: '/blog/react', slug: 'react' },
   { name: '문제풀이', href: '/blog/problem-solving', slug: 'problem-solving' },
+  { name: '잡담', href: '/blog/talk', slug: 'talk' },
   { name: '개발', href: '/blog/dev', slug: 'dev' },
   { name: '프로젝트', href: '/blog/project', slug: 'project' },
 ];
@@ -19,4 +20,5 @@ export const VALID_CATEGORIES = [
   'project',
   'typescript',
   'react',
+  'talk',
 ];
