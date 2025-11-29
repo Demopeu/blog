@@ -4,7 +4,7 @@ import { Posts } from '@/widgets/main/ui/Posts';
 import { getPosts } from '@/entities/post';
 import { VALID_CATEGORIES } from '@/widgets/main';
 
-export const revalidate = 120;
+export const revalidate = 600;
 
 export default async function Page({
   params,
