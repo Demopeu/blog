@@ -14,39 +14,27 @@ export const ssgoiConfig = {
       transition: drill({ direction: 'exit' }),
     },
 
-    // Slide: /blog → /blog/typescript (forward)
+    // Slide: /blog → /blog/reference (forward)
     {
       from: '/blog',
-      to: '/blog/typescript',
+      to: '/blog/reference',
       transition: slide({ direction: 'left' }),
     },
     {
-      from: '/blog/typescript',
+      from: '/blog/reference',
       to: '/blog',
       transition: slide({ direction: 'right' }),
     },
 
-    // Slide: /blog/typescript → /blog/react
+    // Slide: /blog/reference → /blog/problem-solving
     {
-      from: '/blog/typescript',
-      to: '/blog/react',
-      transition: slide({ direction: 'left' }),
-    },
-    {
-      from: '/blog/react',
-      to: '/blog/typescript',
-      transition: slide({ direction: 'right' }),
-    },
-
-    // Slide: /blog/react → /blog/problem-solving
-    {
-      from: '/blog/react',
+      from: '/blog/reference',
       to: '/blog/problem-solving',
       transition: slide({ direction: 'left' }),
     },
     {
       from: '/blog/problem-solving',
-      to: '/blog/react',
+      to: '/blog/reference',
       transition: slide({ direction: 'right' }),
     },
 
@@ -86,19 +74,7 @@ export const ssgoiConfig = {
       transition: slide({ direction: 'right' }),
     },
 
-    // 건너뛰기: /blog → /blog/react (2칸)
-    {
-      from: '/blog',
-      to: '/blog/react',
-      transition: slide({ direction: 'left' }),
-    },
-    {
-      from: '/blog/react',
-      to: '/blog',
-      transition: slide({ direction: 'right' }),
-    },
-
-    // 건너뛰기: /blog → /blog/problem-solving (3칸)
+    // 건너뛰기: /blog → /blog/problem-solving (2칸)
     {
       from: '/blog',
       to: '/blog/problem-solving',
@@ -110,7 +86,7 @@ export const ssgoiConfig = {
       transition: slide({ direction: 'right' }),
     },
 
-    // 건너뛰기: /blog → /blog/talk (4칸)
+    // 건너뛰기: /blog → /blog/talk (3칸)
     {
       from: '/blog',
       to: '/blog/talk',
@@ -122,7 +98,7 @@ export const ssgoiConfig = {
       transition: slide({ direction: 'right' }),
     },
 
-    // 건너뛰기: /blog → /blog/dev (5칸)
+    // 건너뛰기: /blog → /blog/dev (4칸)
     {
       from: '/blog',
       to: '/blog/dev',
@@ -134,7 +110,7 @@ export const ssgoiConfig = {
       transition: slide({ direction: 'right' }),
     },
 
-    // 건너뛰기: /blog → /blog/project (6칸)
+    // 건너뛰기: /blog → /blog/project (5칸)
     {
       from: '/blog',
       to: '/blog/project',
@@ -146,77 +122,35 @@ export const ssgoiConfig = {
       transition: slide({ direction: 'right' }),
     },
 
-    // 중간 건너뛰기들 (typescript 기준)
+    // 중간 건너뛰기들 (reference 기준)
     {
-      from: '/blog/typescript',
-      to: '/blog/problem-solving',
-      transition: slide({ direction: 'left' }),
-    },
-    {
-      from: '/blog/problem-solving',
-      to: '/blog/typescript',
-      transition: slide({ direction: 'right' }),
-    },
-    {
-      from: '/blog/typescript',
+      from: '/blog/reference',
       to: '/blog/talk',
       transition: slide({ direction: 'left' }),
     },
     {
       from: '/blog/talk',
-      to: '/blog/typescript',
+      to: '/blog/reference',
       transition: slide({ direction: 'right' }),
     },
     {
-      from: '/blog/typescript',
+      from: '/blog/reference',
       to: '/blog/dev',
       transition: slide({ direction: 'left' }),
     },
     {
       from: '/blog/dev',
-      to: '/blog/typescript',
+      to: '/blog/reference',
       transition: slide({ direction: 'right' }),
     },
     {
-      from: '/blog/typescript',
+      from: '/blog/reference',
       to: '/blog/project',
       transition: slide({ direction: 'left' }),
     },
     {
       from: '/blog/project',
-      to: '/blog/typescript',
-      transition: slide({ direction: 'right' }),
-    },
-
-    // 중간 건너뛰기들 (react 기준)
-    {
-      from: '/blog/react',
-      to: '/blog/talk',
-      transition: slide({ direction: 'left' }),
-    },
-    {
-      from: '/blog/talk',
-      to: '/blog/react',
-      transition: slide({ direction: 'right' }),
-    },
-    {
-      from: '/blog/react',
-      to: '/blog/dev',
-      transition: slide({ direction: 'left' }),
-    },
-    {
-      from: '/blog/dev',
-      to: '/blog/react',
-      transition: slide({ direction: 'right' }),
-    },
-    {
-      from: '/blog/react',
-      to: '/blog/project',
-      transition: slide({ direction: 'left' }),
-    },
-    {
-      from: '/blog/project',
-      to: '/blog/react',
+      to: '/blog/reference',
       transition: slide({ direction: 'right' }),
     },
 
