@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useMemo } from 'react';
+import { use, useMemo, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Link } from '@vercel/microfrontends/next/client';
 import { Post } from '@/entities/post';
@@ -8,6 +8,11 @@ import { TagFilterContext } from '@/entities/post';
 
 export function Posts({ posts }: { posts: Post[] }) {
   const context = use(TagFilterContext);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   if (!context) {
     throw new Error('Posts must be used within TagFilterProvider');
@@ -53,14 +58,16 @@ export function Posts({ posts }: { posts: Post[] }) {
               {post.description}
             </p>
             <time className="text-muted-foreground text-sm">
-              {new Date(post.published_at)
-                .toLocaleDateString('ko-KR', {
-                  year: 'numeric',
-                  month: '2-digit',
-                  day: '2-digit',
-                })
-                .replace(/\. /g, '.')
-                .replace(/\.$/, '')}
+              {isClient
+                ? new Date(post.published_at)
+                    .toLocaleDateString('ko-KR', {
+                      year: 'numeric',
+                      month: '2-digit',
+                      day: '2-digit',
+                    })
+                    .replace(/\. /g, '.')
+                    .replace(/\.$/, '')
+                : new Date(post.published_at).toISOString().split('T')[0]}
             </time>
           </div>
         </Link>
