@@ -2,6 +2,7 @@ import {
   Code2,
   BrainCircuit,
   Database,
+  MonitorCog,
   ChartColumnStacked,
   Cpu,
   Trophy,
@@ -23,9 +24,9 @@ export const foldersConfig: FoldersProps[] = [
   {
     title: 'Education',
     items: [
-      { label: '컴퓨터 프로그래밍', Icon: Code2 },
       { label: '데이터베이스', Icon: Database },
       { label: '인공지능응용', Icon: BrainCircuit },
+      { label: '컴퓨터 프로그래밍', Icon: Code2 },
     ],
   },
   {
@@ -33,6 +34,7 @@ export const foldersConfig: FoldersProps[] = [
     items: [
       { label: 'ADsP', Icon: ChartColumnStacked },
       { label: '컴퓨터 활용능력', Icon: Cpu },
+      { label: '정보처리기사', Icon: MonitorCog },
     ],
   },
   {
