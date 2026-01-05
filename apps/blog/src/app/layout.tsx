@@ -47,11 +47,7 @@ export const metadata: Metadata = {
   creator: 'Demopeu',
   publisher: 'Demopeu',
   verification: {
-    google:
-      'google-site-verification=VX4rKonLkyX12HIgc-5VtfmV_U9WmPz5zfblDnUKIC4',
-    other: {
-      'naver-site-verification': 'YOUR_NAVER_VERIFICATION_CODE',
-    },
+    google: 'eQH88QQZIQK6vV7IYNUg4cBTRvaMN1LpWE9yqk0DNPs',
   },
   openGraph: {
     type: 'website',
