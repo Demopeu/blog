@@ -1,5 +1,5 @@
 #!/bin/bash
-# GitHub Issue & Branch Auto-Finish (v2 - 병합 즉시 종료 보장)
+# GitHub Issue & Branch Auto-Finish
 
 echo "🚀 PR 생성 및 병합 프로세스를 시작합니다..."
 echo "----------------------------------------"
