@@ -1,0 +1,12 @@
+name: "📝 문서 수정 (Docs)"
+description: README.md 등 프로젝트 관련 문서를 작성하거나 수정할 때 사용합니다.
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 문서 수정 내용
+      description: 어떤 문서를 추가하거나 수정하나요?
+    validations:
+      required: true
