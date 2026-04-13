@@ -1,0 +1,22 @@
+name: "✨ 기능 추가 (Feature)"
+description: 새로운 기능이나 페이지를 추가할 때 사용합니다.
+title: "[Feat]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 💡 기능 설명
+      description: 어떤 기능을 추가하나요?
+      placeholder: (예: 로그인 페이지 UI 및 API 연동)
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: ✅ 작업 상세 내용 (To-do)
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true

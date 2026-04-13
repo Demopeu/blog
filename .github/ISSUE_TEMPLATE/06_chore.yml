@@ -1,0 +1,21 @@
+name: "🔧 기타/설정 (Chore)"
+description: 패키지 설치, 환경 설정, 빌드 업무 등 잡무에 사용합니다.
+title: "[Chore]: "
+labels: ["chore"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 🔧 작업 내용
+      description: 어떤 설정을 변경하거나 추가하나요?
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: ✅ 작업 상세 내용 (To-do)
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
