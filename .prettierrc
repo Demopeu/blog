@@ -1,14 +1,34 @@
 {
-  "printWidth": 80,
+  "printWidth": 100,
   "tabWidth": 2,
   "useTabs": false,
   "semi": true,
   "singleQuote": true,
   "quoteProps": "consistent",
-  "trailingComma": "es5",
+  "trailingComma": "all",
   "bracketSpacing": true,
   "arrowParens": "always",
   "endOfLine": "lf",
   "htmlWhitespaceSensitivity": "css",
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "plugins": [
+    "prettier-plugin-tailwindcss",
+    "prettier-plugin-panda-css",
+    "@trivago/prettier-plugin-sort-imports"
+  ],
+  "importOrder": [
+    "^react",
+    "^next",
+    "<THIRD_PARTY_MODULES>",
+    "^@repo/(.*)$",
+    "^@/app/(.*)$",
+    "^@/pages/(.*)$",
+    "^@/widgets/(.*)$",
+    "^@/features/(.*)$",
+    "^@/entities/(.*)$",
+    "^@/shared/(.*)$",
+    "^@/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": false,
+  "importOrderSortSpecifiers": true
 }

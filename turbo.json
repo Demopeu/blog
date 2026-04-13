@@ -1,5 +1,5 @@
 {
-  "$schema": "https://turborepo.com/schema.json",
+  "$schema": "https://turbo.build/schema.json",
   "ui": "tui",
   "tasks": {
     "build": {
@@ -10,8 +10,8 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
-    "typecheck": {
-      "dependsOn": ["^typecheck"]
+    "check-types": {
+      "dependsOn": ["^check-types"]
     },
     "dev": {
       "cache": false,
@@ -24,6 +24,11 @@
     },
     "clean": {
       "dependsOn": ["^clean"]
+    },
+    "test": {
+      "dependsOn": ["^test"],
+      "outputs": ["coverage/**"],
+      "inputs": ["src/**/*.tsx", "src/**/*.ts", "test/**/*.ts"]
     }
   }
 }

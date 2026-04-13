@@ -2,31 +2,36 @@
   "name": "blog-monorepo",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": ">=10.25.0"
+  },
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
     "lint": "turbo lint",
     "test": "turbo test",
     "start": "turbo start",
-    "typecheck": "turbo run typecheck",
-    "clean": "turbo run clean",
-    "check-before-commit": "pnpm lint && pnpm typecheck",
-    "prepare": "husky install",
+    "clean": "turbo clean",
+    "check-types": "turbo run check-types",
+    "check-before-commit": "turbo lint check-types",
+    "prepare": "husky",
     "task": "bash scripts/g-start.sh",
     "done": "bash scripts/g-done.sh"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
-    "cross-env": "^10.1.0",
-    "husky": "^9.1.7",
-    "prettier": "^3.6.2",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "turbo": "2.6.1"
+    "@commitlint/cli": "20.5.0",
+    "@commitlint/config-conventional": "20.5.0",
+    "@trivago/prettier-plugin-sort-imports": "6.0.2",
+    "husky": "9.1.7",
+    "prettier": "3.8.2",
+    "prettier-plugin-tailwindcss": "0.7.2",
+    "turbo": "2.9.6",
+    "typescript": "6.0.2"
   },
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
-  "packageManager": "pnpm@10.25.0"
+  "packageManager": "pnpm@10.33.0"
 }
