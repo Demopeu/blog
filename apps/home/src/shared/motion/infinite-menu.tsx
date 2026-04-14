@@ -612,7 +612,7 @@ class ArcballControl {
 
     const x = (2 * pos[0] - w - 1) / s;
     const y = (2 * pos[1] - h - 1) / s;
-    let z = 0;
+    let z;
     const xySq = x * x + y * y;
     const rSq = r * r;
 
