@@ -6,6 +6,7 @@
 @import '@repo/tailwind-config';
 
 @source './shadcn/**/*.tsx';
+@source './react-bits/**/*.tsx';
 @source './hooks/**/*.ts';
 @source './icon/**/*.tsx';
 @source './lib/**/*.ts';
