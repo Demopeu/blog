@@ -3,7 +3,7 @@
 import Button from '@/features/theme-toggle/ui/Button';
 import { useThemeToggle } from '@/features/theme-toggle/model/use-theme-toggle';
 
-export function ThemeToggle({ className }: { className?: string }) {
+export function ThemeToggle({ className = "" }: { className?: string }) {
   const { mounted, isDark, toggleTheme } = useThemeToggle();
   return (
     <Button
