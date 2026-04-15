@@ -2,9 +2,11 @@
  * @repo/ui Tailwind CSS entry point
  * tsup + PostCSS로 빌드되어 dist/tailwind.css로 출력됩니다.
  */
+@import 'tailwindcss';
 @import '@repo/tailwind-config';
 
 @source './shadcn/**/*.tsx';
+@source './react-bits/**/*.tsx';
 @source './hooks/**/*.ts';
 @source './icon/**/*.tsx';
 @source './lib/**/*.ts';

@@ -12,8 +12,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts",
-    "../blog/src/app/provider/cross-zone-links-provider.tsx"
+    ".next/dev/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }
