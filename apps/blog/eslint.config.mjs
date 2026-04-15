@@ -1,15 +1,12 @@
-import { nextJsConfig } from "@repo/eslint-config/next-js";
+import { nextJsConfig } from '@repo/eslint-config/next-js';
 
-/** @type {import("eslint").Linter.FlatConfig[]} */
+/** @type {import("eslint").Linter.Config[]} */
 export default [
   ...nextJsConfig,
   {
+    files: ['src/shared/lib/compose-providers.tsx'],
     rules: {
-      "react-hooks/rules-of-hooks": "error",
-      "react-hooks/exhaustive-deps": [
-        "error",
-        { additionalHooks: "(useEffectEvent|useOptimistic)" },
-      ],
+      '@eslint-react/component-hook-factories': 'off',
     },
   },
 ];

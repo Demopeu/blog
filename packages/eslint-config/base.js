@@ -21,6 +21,9 @@ export const config = [
       '.turbo/**', // Turborepo 빌드 캐시
       'node_modules/**', // 패키지 모듈
       'pnpm-lock.yaml', // 패키지 잠금 파일
+      '**/*.mjs', // 모든 .mjs 설정 파일 (postcss.config.mjs 등)
+      '**/*.config.ts', // tsup.config.ts, tailwind.config.ts 등
+      '**/*.config.js', // 기타 설정 파일들
     ],
   },
 

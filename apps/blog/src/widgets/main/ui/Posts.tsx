@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useMemo, useState, useEffect } from 'react';
+import { use, useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import { Link } from '@vercel/microfrontends/next/client';
 import type { Post } from '@/entities/post';
@@ -11,7 +11,6 @@ export function Posts({ posts }: { posts: Post[] }) {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsClient(true);
   }, []);
 
@@ -27,9 +26,7 @@ export function Posts({ posts }: { posts: Post[] }) {
     }
 
     return posts.filter((post) =>
-      Array.from(selectedTags).every((selectedTag) =>
-        post.tags.includes(selectedTag)
-      )
+      Array.from(selectedTags).every((selectedTag) => post.tags.includes(selectedTag)),
     );
   }, [posts, selectedTags]);
 
@@ -51,13 +48,9 @@ export function Posts({ posts }: { posts: Post[] }) {
             />
           </div>
           <div className="sm:flex-1/12 flex min-w-0 flex-1 flex-col justify-center space-y-2">
-            <span className="text-muted-foreground text-sm">
-              {post.category}
-            </span>
+            <span className="text-muted-foreground text-sm">{post.category}</span>
             <h3 className="line-clamp-2 text-xl font-bold">{post.title}</h3>
-            <p className="text-muted-foreground line-clamp-2 text-sm">
-              {post.description}
-            </p>
+            <p className="text-muted-foreground line-clamp-2 text-sm">{post.description}</p>
             <time className="text-muted-foreground text-sm">
               {isClient
                 ? new Date(post.published_at)
