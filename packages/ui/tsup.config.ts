@@ -5,7 +5,11 @@ export default defineConfig({
   outDir: 'dist',
   format: ['esm'],
   bundle: false,
-  dts: true,
+  dts: {
+    compilerOptions: {
+      ignoreDeprecations: '6.0',
+    },
+  },
   esbuildOptions(options) {
     options.jsx = 'automatic';
   },
