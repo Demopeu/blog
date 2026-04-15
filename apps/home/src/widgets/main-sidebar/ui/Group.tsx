@@ -1,6 +1,6 @@
 import { SidebarGroup } from '@repo/ui/components';
 import { NavBar } from './NavBar';
-import { NavBarProps } from '../consts/nav-config';
+import type { NavBarProps } from '../consts/nav-config';
 
 export function Group({
   localNavItems,

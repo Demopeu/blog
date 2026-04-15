@@ -1,6 +1,6 @@
 import { NavBar } from './NavBar';
 import { ThemeToggle } from '@/features/theme-toggle';
-import { NavBarProps } from '../consts/nav';
+import type { NavBarProps } from '../consts/nav';
 import { SideBarToggle } from '@/features/sidebar-toggle';
 
 export function HeaderActions({

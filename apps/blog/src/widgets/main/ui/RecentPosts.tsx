@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Link } from '@vercel/microfrontends/next/client';
 import { useEffect, useState } from 'react';
 import { cn } from '@repo/ui/lib/utils';
-import { RecentPost } from '@/entities/post/api/getRecentPost';
+import type { RecentPost } from '@/entities/post/api/getRecentPost';
 
 export function RecentPosts({ posts }: { posts: RecentPost[] }) {
   const [selectedIndex, setSelectedIndex] = useState(0);

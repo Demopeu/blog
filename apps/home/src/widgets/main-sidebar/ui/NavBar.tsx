@@ -4,7 +4,7 @@ import NextLink from 'next/link';
 import { Link as MicroLink } from '@vercel/microfrontends/next/client';
 import { usePathname } from 'next/navigation';
 import { cn } from '@repo/ui/lib/utils';
-import { NavBarProps } from '../consts/nav-config';
+import type { NavBarProps } from '../consts/nav-config';
 import { iconMap } from '../lib/IconMap';
 
 export function NavBar({

@@ -4,7 +4,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@repo/ui/*": ["../../packages/ui/src/*"]
-    }
+    },
+    "exactOptionalPropertyTypes": false
   },
   "include": [
     "next-env.d.ts",
