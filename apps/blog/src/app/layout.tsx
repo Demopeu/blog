@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
-import { Poppins, Noto_Sans_KR } from 'next/font/google';
-import './styles/base.css';
-import { Providers } from './provider/providers';
-import { SidebarProvider } from '@repo/ui/components/sidebar';
+import { Noto_Sans_KR, Poppins } from 'next/font/google';
+import { PrefetchCrossZoneLinks } from '@vercel/microfrontends/next/client';
+import { SidebarProvider } from '@repo/ui/shadcn/sidebar';
+import { MainFooter } from '@/widgets/main-footer';
 import { MainHeader } from '@/widgets/main-header';
 import { MainSidebar } from '@/widgets/main-sidebar';
-import { MainFooter } from '@/widgets/main-footer';
-import { PrefetchCrossZoneLinks } from '@vercel/microfrontends/next/client';
 import { StructuredData } from '@/shared/seo/StructuredData';
+import { Providers } from './provider/providers';
+import './styles/base.css';
 
 const notoSansKr = Noto_Sans_KR({
   variable: '--font-noto-sans-kr',

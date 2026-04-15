@@ -1,13 +1,11 @@
 'use client';
 
-import { useSidebar } from '@repo/ui/components';
+import { useSidebar } from '@repo/ui/shadcn';
 import { Button } from './Button';
 
-export function SideBarToggle({ className = "" }: { className?: string }) {
+export function SideBarToggle({ className = '' }: { className?: string }) {
   const { toggleSidebar, state, isMobile, openMobile } = useSidebar();
   const isOpen = isMobile ? openMobile : state === 'expanded';
 
-  return (
-    <Button isOpen={isOpen} onToggle={toggleSidebar} className={className} />
-  );
+  return <Button isOpen={isOpen} onToggle={toggleSidebar} className={className} />;
 }

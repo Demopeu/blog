@@ -3,7 +3,7 @@
 import type { FC, RefObject } from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { mat4, quat, vec2, vec3 } from 'gl-matrix';
-import { Github } from '@/shared/icon';
+import { Github } from '../icon';
 
 const discVertShaderSource = `#version 300 es
 

@@ -1,5 +1,5 @@
-import { Home, FileText, NotebookPen } from 'lucide-react';
-import { Github } from '@/shared/icon';
+import { FileText, Home, NotebookPen } from 'lucide-react';
+import { Github } from '@repo/ui/icon';
 
 export const iconMap = {
   home: Home,

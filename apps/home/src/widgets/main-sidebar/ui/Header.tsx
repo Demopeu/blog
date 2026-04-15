@@ -1,4 +1,4 @@
-import { SidebarHeader } from '@repo/ui/components';
+import { SidebarHeader } from '@repo/ui/shadcn';
 import { HoverImage } from './HoverImage';
 
 export function Header() {

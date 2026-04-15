@@ -1,10 +1,10 @@
-import { Sidebar } from '@repo/ui/components';
-import { Header } from './Header';
+import { Sidebar } from '@repo/ui/shadcn';
 import { SideBarToggle } from '@/features/sidebar-toggle';
+import { ThemeToggle } from '@/features/theme-toggle';
+import { CrossZoneNavItems, LocalNavItems } from '../consts/nav';
 import { Footer } from './Footer';
 import { Group } from './Group';
-import { LocalNavItems, CrossZoneNavItems } from '../consts/nav';
-import { ThemeToggle } from '@/features/theme-toggle';
+import { Header } from './Header';
 
 export function MainSidebar() {
   return (
@@ -17,10 +17,7 @@ export function MainSidebar() {
         <SideBarToggle />
       </div>
       <Header />
-      <Group
-        localNavItems={LocalNavItems}
-        crossZoneNavItems={CrossZoneNavItems}
-      />
+      <Group localNavItems={LocalNavItems} crossZoneNavItems={CrossZoneNavItems} />
       <Footer />
     </Sidebar>
   );

@@ -1,8 +1,8 @@
-import { MainHeader } from '@/widgets/main-header';
-import { Particles } from '@/shared/motion';
-import { SidebarProvider } from '@repo/ui/components/sidebar';
-import { MainSidebar } from '@/widgets/main-sidebar';
+import { Particles } from '@repo/ui/react-bits';
+import { SidebarProvider } from '@repo/ui/shadcn/sidebar';
 import { MainFooter } from '@/widgets/main-footer';
+import { MainHeader } from '@/widgets/main-header';
+import { MainSidebar } from '@/widgets/main-sidebar';
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (

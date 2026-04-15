@@ -1,6 +1,6 @@
-import { SidebarFooter } from '@repo/ui/components';
-import { Github } from '@/shared/icon';
 import Link from 'next/link';
+import { Github } from '@repo/ui/icon';
+import { SidebarFooter } from '@repo/ui/shadcn';
 
 export function Footer() {
   return (
@@ -10,9 +10,7 @@ export function Footer() {
           <Github className="size-6" aria-hidden />
         </Link>
       </div>
-      <p className="text-foreground/50 text-xs">
-        © 2025 Demopeu. All rights reserved.
-      </p>
+      <p className="text-foreground/50 text-xs">© 2025 Demopeu. All rights reserved.</p>
     </SidebarFooter>
   );
 }

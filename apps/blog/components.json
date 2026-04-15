@@ -16,7 +16,7 @@
     "lib": "@/shared/lib",
     "hooks": "@/shared/hooks",
     "utils": "@repo/ui/lib/utils",
-    "ui": "@repo/ui/components"
+    "ui": "@repo/ui/shadcn"
   },
   "registries": {
     "@react-bits": "https://reactbits.dev/r/{name}.json"

@@ -1,4 +1,4 @@
-import { SplitText, RotatingText } from '@/shared/motion';
+import { RotatingText, SplitText } from '@repo/ui/react-bits';
 
 export function HeroText({
   heroText,
@@ -15,11 +15,7 @@ export function HeroText({
 }) {
   return (
     <article className="space-y-2 text-3xl font-bold md:text-4xl lg:text-5xl xl:text-6xl">
-      <SplitText
-        text={heroText.firstLine}
-        tag="h1"
-        className="whitespace-nowrap"
-      />
+      <SplitText text={heroText.firstLine} tag="h1" className="whitespace-nowrap" />
       <h1 className="flex flex-wrap items-baseline gap-3">
         <SplitText text={heroText.secondLine} tag="span" />
         <SplitText

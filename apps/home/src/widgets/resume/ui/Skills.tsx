@@ -1,6 +1,6 @@
-import { SectionHeader } from './SectionHeader';
-import { FlowingMenu } from '@/shared/motion';
+import { FlowingMenu } from '@repo/ui/react-bits';
 import { SkillsGroups } from '../consts/skills';
+import { SectionHeader } from './SectionHeader';
 import { SectionWrapper } from './section-wrapper';
 
 export function Skills() {

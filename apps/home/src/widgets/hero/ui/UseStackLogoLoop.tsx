@@ -1,4 +1,4 @@
-import { LogoLoop } from '@/shared/motion';
+import { LogoLoop } from '@repo/ui/react-bits';
 
 export function UseStackLogoLoop({
   techLogos,
