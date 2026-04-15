@@ -1,6 +1,7 @@
 "use client"
 
-import { FC, useRef, useState, useEffect, RefObject } from 'react';
+import type {FC, RefObject} from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { mat4, quat, vec2, vec3 } from 'gl-matrix';
 import { Github } from '@/shared/icon';
 

@@ -1,4 +1,4 @@
-import { FolderItem } from "../consts/folder";
+import type { FolderItem } from "../consts/folder";
 
 export const MappedItems = ({items}: {items: FolderItem[]}) => items.map(({ label, Icon }) => (
     <div

@@ -4,7 +4,7 @@ import { useMemo, use } from 'react';
 import { usePathname } from 'next/navigation';
 import { X } from 'lucide-react';
 import { cn } from '@repo/ui/lib/utils';
-import { Post } from '@/entities/post';
+import type { Post } from '@/entities/post';
 import { TagFilterContext } from '@/entities/post';
 
 const EN_COLLATOR = new Intl.Collator('en', {

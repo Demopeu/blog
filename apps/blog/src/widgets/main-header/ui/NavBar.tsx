@@ -1,7 +1,7 @@
 import NextLink from 'next/link';
 import { Link as MicroLink } from '@vercel/microfrontends/next/client';
 import { cn } from '@repo/ui/lib/utils';
-import { NavBarProps } from '../consts/nav';
+import type { NavBarProps } from '../consts/nav';
 
 export function NavBar({
   navItems,

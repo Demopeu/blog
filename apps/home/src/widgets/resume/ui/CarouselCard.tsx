@@ -1,6 +1,6 @@
 'use client';
 
-import { CarouselItem } from '../consts/portfolio';
+import type { CarouselItem } from '../consts/portfolio';
 import { Github } from '@/shared/icon';
 import { useFlag } from '@/shared/hooks';
 import Link from 'next/link';

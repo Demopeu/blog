@@ -11,7 +11,7 @@ import React, {
 import {
   motion,
   AnimatePresence,
-  Transition,
+  type Transition,
   type VariantLabels,
   type Target,
   type TargetAndTransition,

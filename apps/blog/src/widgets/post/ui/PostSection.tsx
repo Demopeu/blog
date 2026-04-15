@@ -2,7 +2,7 @@ import { BackNav } from './BackNav';
 import { PostContent } from './PostContent';
 import { PostHeader } from './PostHeader';
 import { PostMeta } from './PostMeta';
-import { Post } from '@/entities/post';
+import type { Post } from '@/entities/post';
 import { renderMarkdown } from '@/shared/lib/render-markdown';
 import { PostStructuredData } from '@/shared/seo/PostStructuredData';
 

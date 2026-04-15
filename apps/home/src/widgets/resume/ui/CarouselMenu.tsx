@@ -1,6 +1,6 @@
 "use client";
 import useEmblaCarousel from "embla-carousel-react";
-import { CarouselItem } from "../consts/portfolio";
+import type { CarouselItem } from "../consts/portfolio";
 import { CarouselCard } from "./CarouselCard";
 
 export function CarouselMenu({ items }: { items: CarouselItem[] }) {

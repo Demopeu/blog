@@ -3,7 +3,7 @@
 import { use, useMemo, useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Link } from '@vercel/microfrontends/next/client';
-import { Post } from '@/entities/post';
+import type { Post } from '@/entities/post';
 import { TagFilterContext } from '@/entities/post';
 
 export function Posts({ posts }: { posts: Post[] }) {
