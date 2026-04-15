@@ -36,5 +36,6 @@
   // 8. 터보레포 스키마 다운로드 허용 (Untrusted 에러 해결)
   "json.schemaDownload.trustedDomains": {
     "https://turbo.build/": true
-  }
+  },
+  "js/ts.tsdk.path": "node_modules/typescript/lib"
 }
