@@ -3,7 +3,7 @@
 import { useSidebar } from '@repo/ui/components';
 import { Button } from './Button';
 
-export function SideBarToggle({ className }: { className?: string }) {
+export function SideBarToggle({ className = "" }: { className?: string }) {
   const { toggleSidebar, state, isMobile, openMobile } = useSidebar();
   const isOpen = isMobile ? openMobile : state === 'expanded';
 
