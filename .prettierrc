@@ -12,7 +12,6 @@
   "htmlWhitespaceSensitivity": "css",
   "plugins": [
     "prettier-plugin-tailwindcss",
-    "prettier-plugin-panda-css",
     "@trivago/prettier-plugin-sort-imports"
   ],
   "importOrder": [
