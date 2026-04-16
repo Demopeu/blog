@@ -4,6 +4,7 @@ import { withMicrofrontends } from '@vercel/microfrontends/next/config';
 const nextConfig: NextConfig = {
   turbopack: {},
   reactCompiler: true,
+  cacheComponents: true,
 };
 
 export default withMicrofrontends(nextConfig);
