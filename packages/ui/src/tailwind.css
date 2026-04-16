@@ -55,6 +55,7 @@
   --spacing-bmt: var(--big-section-y);
   --spacing-mt: var(--section-y);
 
+  --breakpoint-xs: 480px;
   --color-header-background: var(--header-background);
 
   --animate-sun-rise: sun-rise 0.7s ease-in-out forwards;

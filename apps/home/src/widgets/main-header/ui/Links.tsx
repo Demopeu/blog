@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { cn } from '@repo/ui/tailwind';
 
 const navItems = [
   { label: 'Home', href: '/' },
@@ -13,7 +14,12 @@ export function Links() {
         <Link
           key={item.label}
           href={item.href}
-          className="text-black dark:text-white font-medium hover:opacity-70 transition-opacity"
+          className={cn(
+            'text-xl font-medium text-foreground px-4 py-2 rounded-2xl',
+            'transition-all duration-200 ease-out',
+            'hover:bg-accent hover:text-accent-foreground',
+            'active:scale-90',
+          )}
         >
           {item.label}
         </Link>

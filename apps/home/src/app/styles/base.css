@@ -1,3 +1,4 @@
+@import '@repo/tailwind-config';
 @import '@repo/ui/tailwind.css';
 
 @import './tokens.light.css';

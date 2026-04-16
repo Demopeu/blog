@@ -6,24 +6,22 @@ interface HeaderProps {
   nav: ReactNode;
   theme: ReactNode;
   mobileMenu: ReactNode;
+  className?: string;
 }
 
-export function Header({ logo, nav, theme, mobileMenu }: HeaderProps) {
+export function Header({ logo, nav, theme, mobileMenu, className }: HeaderProps) {
   return (
-    <header className="mx-auto mt-[3.42vw] w-[90vw] max-w-7xl">
+    <header className={cn('mx-auto mt-[4vw] w-[90vw] max-w-[1568px]', className)}>
       <div
         className={cn(
-          'bg-header-background text-foreground',
-          'flex items-center justify-between rounded-full',
+          'bg-background text-foreground',
+          'flex items-center rounded-full',
           'pt-[0.928vw] pr-[0.928vw] pb-[0.928vw] pl-[3.14vw]',
-          'gap-[3.42vw]',
         )}
       >
-        {logo}
-
-        <nav className="hidden md:flex items-center gap-2vw">{nav}</nav>
-
-        <div className="flex items-center gap-1vw">
+        <div className="flex flex-1 justify-start">{logo}</div>
+        <nav className="hidden md:flex items-center justify-center gap-[2vw]">{nav}</nav>
+        <div className="flex flex-1 items-center justify-end gap-[1vw]">
           {theme}
           {mobileMenu}
         </div>
