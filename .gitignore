@@ -51,6 +51,14 @@ apps/*/.env.*
 packages/*/.env
 packages/*/.env.*
 
+# testing & e2e
+coverage
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+playwright/.auth/
+
 # vercel
 .vercel
 
